@@ -1595,6 +1595,9 @@ a {
 .subscription {
   padding: 45px 0;
   background-image: url("../assets/img/subscription-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .subscription__container {
   -webkit-box-align: center;

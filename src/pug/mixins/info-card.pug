@@ -2,7 +2,7 @@ mixin info-card(data)
 
   a(href="#").info-card
     .info-card__header
-      img(src=`../assets/img/${data.img}` alt= data.title title = data.title width="540" height="360")
+      img(src=`./assets/img/${data.img}` alt= data.title title = data.title width="540" height="360")
       .info-card__header-date
         span!= data.date
     .info-card__body
