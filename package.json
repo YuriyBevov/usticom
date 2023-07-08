@@ -47,6 +47,8 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.20",
+    "imask": "^7.1.0-alpha.0",
     "swiper": "^8.4.5"
   },
   "repository": {
