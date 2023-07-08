@@ -1,0 +1,35 @@
+.subscription {
+  padding: 45px 0;
+  background-image: url("../assets/img/subscription-bg.png");
+
+  &__container {
+    @extend .flex-wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    @extend .flex-column;
+    padding-right: 30px;
+  }
+
+  &__title {
+    font-family: var(--alt-font-family);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: var(--white);
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 36px;
+    color: var(--white);
+  }
+
+  &__btn {
+    background-color: var(--skyblue);
+    color: var(--white);
+  }
+}

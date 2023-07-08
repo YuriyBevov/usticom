@@ -3,25 +3,29 @@
 
 :root {
     // base
-    --font-family: "Montserrat", sans-serif;
-    --content-width: 1240px;
+    --font-family: "Raleway", sans-serif;
+    --alt-font-family: "Montserrat", sans-serif;
+    --content-width: 1660px;
     --content-fluid-width: 1790px;
-    --container-offset: 15px;
+    --container-offset: 30px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
 
     // colors
-    --white: #fff;
+    --white: #ffffff;
     --black: #000000;
 
-    --accent: #05376C;
-    --warning: #fff4d4;
-    --danger: #f58128;
-    --skyblue: #e5eaf0;
-    --light: #e0e0e0;
-    --gray: #f8f8f8;
+    --primary: #1f1f1f;
+    --accent: #a70a12;
+    --gray: #545454;
+    --text: #7d7d7d;
+    --skyblue: #24a4e3;
 
     --main-bg: var(--white);
+
+    //transitions
+    --main-transition: .2s ease-in;
+    --slow-transition: .7s ease-in;
 
     // scrollbar
     --main-scrollbar-width: 6px;

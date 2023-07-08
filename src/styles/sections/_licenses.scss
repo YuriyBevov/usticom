@@ -1,0 +1,10 @@
+.licenses {
+  &-slider {
+    .swiper-slide {
+      @include m-b-mobile-lg-down {
+        max-width: 200px;
+        max-height: 160px;
+      }
+    }
+  }
+}

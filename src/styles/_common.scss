@@ -12,15 +12,32 @@
     max-width: var(--container-fluid-width);
   }
 
-  &-title {
-
+  &-section-offset {
+    padding: 48px 0;
   }
 
-  &-subtitle {
-
+  &-section {
+    @extend .lw-section-offset;
   }
 
-  &-main-text {
+  &-section-title {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--alt-font-family);
 
+    margin: 0;
+  }
+
+  &-main-btn {
+    @extend .flex-centered-content;
+    @extend .btn-reset;
+    width: fit-content;
+    font-family: var(--alt-font-family);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 22px 27px;
+    color: var(--white);
+
+    @extend .hover-opacity;
   }
 }

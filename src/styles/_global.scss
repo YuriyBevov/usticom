@@ -24,6 +24,8 @@ body {
   flex-direction: column;
   font-family: var(--font-family, sans-serif);
   font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary);
   background-color: var(--main-bg-color);
 
   &.body-locked {

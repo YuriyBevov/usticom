@@ -1,0 +1,26 @@
+.clients {
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    width: fit-content;
+    height: fit-content;
+
+    &:not(:last-child) {
+      padding-right: 95px;
+    }
+
+    img {
+      object-fit: contain;
+      filter: sepia();
+      transition: filter var(--slow-transition);
+
+      &:hover,
+      &:focus {
+        filter: none;
+      }
+    }
+  }
+}

@@ -8,8 +8,17 @@
 @import "common";
 
 /* Компоненты */
+@import "./components/section-header";
+@import "./components/info-card";
+@import "./components/news-list";
+@import "./components/swiper-custom";
 
 /* Секции */
+@import "./sections/news";
+@import "./sections/subscription";
+@import "./sections/clients";
+@import "./sections/licenses";
+
 /* Модальные окна */
 
 

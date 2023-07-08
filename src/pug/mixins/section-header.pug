@@ -1,0 +1,6 @@
+mixin section-header(data)
+  .section-header
+    #{data.tag}(class = data.titleClass ? data.titleClass : null).lw-section-title!= data.title
+
+    if data.linkText
+      a(href= data.linkUrl)!= data.linkText

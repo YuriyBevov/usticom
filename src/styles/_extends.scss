@@ -1,23 +1,19 @@
 /* flex*/
-
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
 }
-
 .flex-centered-content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .flex-column {
   display: flex;
   flex-direction: column;
 }
 
 /*text*/
-
 .text-truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -42,20 +38,17 @@
   margin: 0;
   padding: 0;
 }
-
 .fieldset-reset {
   margin: 0;
   padding: 0;
   border: 0;
 }
-
 .btn-reset {
   border: none;
   padding: 0;
   background: transparent;
   cursor: pointer;
 }
-
 .input-reset {
   -webkit-appearance: none;
   appearance: none;
@@ -71,7 +64,7 @@
   }
 }
 
-/*elements*/
+/*common*/
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -90,5 +83,15 @@
   &:hover,
   &:focus {
     opacity: 0.7;
+  }
+}
+
+.hover-image-scale {
+  transform: scale(1.01);
+  transition: transform var(--slow-transition);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
   }
 }

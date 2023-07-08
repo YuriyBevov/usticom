@@ -1,0 +1,18 @@
+include ../../mixins/section-header
+include ../../mixins/main-btn
+
+section.lw-section.subscription
+  .lw-container.subscription__container
+    .subscription__content
+      h2.lw-section-title.subscription__title Наш телеграм канал
+      span.subscription__text Самые актуальные новости для бизнеса
+
+      +main-btn({
+        tag: 'a',
+        url: 'https://t.me/Usticom',
+        cls: 'subscription__btn',
+        btnText: 'Подписаться'
+      })
+
+    img(src="./assets/img/tg-code.png" alt="QR код" width="260" height="260")
+

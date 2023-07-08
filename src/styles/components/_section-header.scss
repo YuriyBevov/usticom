@@ -1,0 +1,15 @@
+.section-header {
+  @extend .flex-wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 32px;
+
+  a {
+    font-family: var(--alt-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+
+    @extend .hover-opacity;
+  }
+}

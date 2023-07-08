@@ -1,0 +1,21 @@
+include ../../mixins/main-slider
+
+section.lw-section.clients
+  .lw-container
+    +section-header({
+      tag: 'h2',
+      title: 'Клиенты'
+    })
+
+    +main-slider({
+      isPaginationEnabled:  true,
+      isNavigationEnabled:  false,
+      slidesPerViewDesktop: 'auto',
+      slidesPerViewLaptop:  'auto',
+      slidesPerViewTablet:  'auto',
+      slidesPerViewMobile:  'auto',
+      slidesPerViewAuto:    'auto',
+
+      slides: clientsSlider,
+      cls: 'clients-slider'
+    })

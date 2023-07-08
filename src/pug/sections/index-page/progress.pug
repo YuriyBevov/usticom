@@ -1,0 +1,17 @@
+include ../../mixins/info-card
+include ../../mixins/section-header
+
+section.lw-section
+  .lw-container
+    +section-header({
+      tag: 'h2',
+      title: 'Успехи',
+      linkText: 'Все',
+      linkUrl: '#'
+    })
+
+    ul.news-list
+      each item in newsList
+        li.news-list__item
+          +info-card(item)
+
