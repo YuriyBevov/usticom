@@ -7,13 +7,22 @@
 @import "extends";
 @import "common";
 
+/*шаблон*/
+@import "./layout/main-header";
+@import "./layout/main-footer";
+
+
 /* Компоненты */
 @import "./components/section-header";
+@import "./components/social";
 @import "./components/info-card";
 @import "./components/news-list";
 @import "./components/swiper-custom";
+@import "./components/subscribe-block";
+@import "./components/footer-contacts";
 
 /* Секции */
+@import "./sections/hero";
 @import "./sections/news";
 @import "./sections/features";
 @import "./sections/subscription";

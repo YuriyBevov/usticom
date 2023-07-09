@@ -1,0 +1,45 @@
+.footer-contacts {
+  @extend .flex-wrap;
+  margin-left: auto;
+
+  &__field {
+    position: relative;
+    @extend .flex-column;
+    justify-content: center;
+    min-height: 68px;
+    max-width: 300px;
+    padding-left: 80px;
+    margin-left: 90px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 68px;
+      height: 68px;
+    }
+
+    span {
+      display: inline-block;
+      font-family: var(--alt-font-family);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--primary);
+
+      @extend .hover-opacity;
+    }
+
+    address {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      color: var(--primary);
+    }
+  }
+}

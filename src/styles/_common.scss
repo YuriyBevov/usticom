@@ -12,6 +12,13 @@
     max-width: var(--container-fluid-width);
   }
 
+  &-container-thin {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-thin-width);
+  }
+
   &-section-offset {
     padding: 48px 0;
   }
@@ -35,9 +42,13 @@
     font-family: var(--alt-font-family);
     font-size: 18px;
     font-weight: 700;
-    padding: 22px 27px;
+    padding: 20px;
     color: var(--white);
 
     @extend .hover-opacity;
+  }
+
+  &-accent-color {
+    color: var(--accent);
   }
 }

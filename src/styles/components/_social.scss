@@ -1,0 +1,22 @@
+.social {
+  &__list {
+    @extend .flex-wrap;
+  }
+
+  &__list-item {
+    a {
+      @extend .flex-centered-content;
+
+      svg {
+        transition: fill var(--main-transition);
+
+        &:hover,
+        &:focus {
+          fill: var(--accent);
+          opacity: 1;
+        }
+      }
+    }
+    margin-right: 16px;
+  }
+}

@@ -7,9 +7,11 @@
     --alt-font-family: "Montserrat", sans-serif;
     --content-width: 1660px;
     --content-fluid-width: 1790px;
+    --content-thin-width: 1220px;
     --container-offset: 30px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+    --container-thin-width: calc(var(--content-thin-width) + (var(--container-offset) * 2));
 
     // colors
     --white: #ffffff;
