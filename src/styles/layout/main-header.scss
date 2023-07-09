@@ -1,3 +1,39 @@
 .main-header {
+  &__container {
+    @extend .flex-wrap;
+    align-items: center;
+  }
 
+  &__section {
+    padding: 25px 0;
+
+    ul {
+      @extend .list-reset;
+    }
+
+    &--top {
+      padding: 12px;
+      background: linear-gradient(90deg, #C8C8C8 0%, #EDEDED 100%);
+
+      .social {
+        margin-left: auto;
+        svg {
+          fill: var(--text);
+        }
+      }
+
+      button {
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 30px;
+        width: 100%;
+        max-width: 210px;
+        background-color: var(--accent);
+      }
+    }
+
+    &--bottom {
+
+    }
+  }
 }

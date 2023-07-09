@@ -38,7 +38,8 @@
   &-main-btn {
     @extend .flex-centered-content;
     @extend .btn-reset;
-    width: fit-content;
+    width: 100%;
+    max-width: fit-content;
     font-family: var(--alt-font-family);
     font-size: 18px;
     font-weight: 700;
@@ -50,5 +51,31 @@
 
   &-accent-color {
     color: var(--accent);
+  }
+
+  &-iconed-link {
+    @extend .flex-wrap;
+    align-items: center;
+    margin-right: 50px;
+
+    svg {
+      margin-right: 10px;
+      fill: var(--accent);
+    }
+
+    span {
+      font-family: var(--alt-font-family);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      transition: color var(--main-transition);
+    }
+
+    &:hover,
+    &:focus {
+      span {
+        color: var(--accent);
+      }
+    }
   }
 }

@@ -28,6 +28,7 @@
       font-weight: 500;
       padding: 20px;
       height: inherit;
+      flex-grow: 1;
 
       &::placeholder {
         font-size: 18px;
@@ -37,6 +38,7 @@
   }
 
   &__submit-btn {
+    max-width: 168px;
     font-size: 16px;
     font-weight: 700;
     height: inherit;

@@ -11,8 +11,37 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <header>
-      <p>header</p>
+    <header class="main-header">
+      <div class="main-header__section main-header__section--top">
+        <div class="lw-container main-header__container"><a class="lw-iconed-link" href="tel:74991163616">
+            <svg width="18" height="18">
+              <use xlink:href="./assets/sprite.svg#icon-phone"></use>
+            </svg><span>7 (499) 116-36-16</span></a><a class="lw-iconed-link" href="mailto:call@usticom.ru">
+            <svg width="18" height="18">
+              <use xlink:href="./assets/sprite.svg#icon-mail"></use>
+            </svg><span>call@usticom.ru</span></a>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__list-item"><a href="#" rel="nofollow noreferrer noopener">
+                  <svg width="36" height="36">
+                    <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+                  </svg></a></li>
+              <li class="social__list-item"><a href="#" rel="nofollow noreferrer noopener">
+                  <svg width="36" height="36">
+                    <use xlink:href="./assets/sprite.svg#icon-fb"></use>
+                  </svg></a></li>
+              <li class="social__list-item"><a href="#" rel="nofollow noreferrer noopener">
+                  <svg width="52" height="36">
+                    <use xlink:href="./assets/sprite.svg#icon-youtube"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <button class="lw-main-btn" type="button">Оставить заявку</button>
+        </div>
+      </div>
+      <div class="main-header__section main-header__section--bottom">
+        <div class="lw-container main-header__container"><a class="main-logo" href="/" aria-label="https://www.usticom.ru"><img src="./assets/img/logo.svg" alt="Юстиком" title="Юстиком" width="178" height="50"></a></div>
+      </div>
     </header>
     <main>
       <section class="lw-section hero">
@@ -254,7 +283,7 @@
     <footer class="main-footer">
       <div class="lw-container-thin">
         <div class="main-footer__section">
-          <div class="main-footer__logo"><a href="/" aria-label="https://www.usticom.ru"><img src="./assets/img/logo.svg" alt="Юстиком" title="Юстиком" width="178" height="50"></a></div>
+          <div class="main-footer__logo"><a class="main-logo" href="/" aria-label="https://www.usticom.ru"><img src="./assets/img/logo.svg" alt="Юстиком" title="Юстиком" width="178" height="50"></a></div>
           <div class="footer-contacts">
             <div class="footer-contacts__field"><img src="./assets/img/icon-phone.svg" alt="Номер телефона" width="26" height="26"><span>Номер телефона</span><a href="tel:84991163616">8 (499) 116-36-16</a></div>
             <div class="footer-contacts__field"><img src="./assets/img/icon-mail.svg" alt="Почта" width="26" height="20"><span>Почта</span><a href="mailto:call@usticom.ru">call@usticom.ru</a></div>

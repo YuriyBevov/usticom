@@ -1,2 +1,12 @@
-header
-  p header
+header.main-header
+  .main-header__section.main-header__section--top
+    .lw-container.main-header__container
+      include ../components/company-phone
+      include ../components/company-mail
+      include ../components/social
+      button(type="button").lw-main-btn Оставить заявку
+  .main-header__section.main-header__section--bottom
+    .lw-container.main-header__container
+      include ../components/main-logo
+
+
