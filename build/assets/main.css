@@ -1455,7 +1455,7 @@ a {
   max-width: var(--container-thin-width);
 }
 .lw-section-offset, .lw-section {
-  padding: 48px 0;
+  margin-bottom: 96px;
 }
 .lw-section-title {
   font-size: 40px;
@@ -1771,7 +1771,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  margin-bottom: 48px;
 }
 .hero::after {
   position: absolute;
@@ -1947,6 +1946,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding: 54px 0;
 }
 
 .callback-form {
