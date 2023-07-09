@@ -57,6 +57,7 @@
     @extend .flex-wrap;
     align-items: center;
     margin-right: 50px;
+    min-height: 40px;
 
     svg {
       margin-right: 10px;
