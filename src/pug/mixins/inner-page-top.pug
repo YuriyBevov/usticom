@@ -1,0 +1,6 @@
+mixin inner-page-top(data)
+  section.lw-section.inner-page-top
+    .lw-container-fluid
+      .lw-container.inner-page-top__container
+        h1.lw-page-title!= data.title
+        img(src=`./assets/img/${data.img}` alt= data.title width="1180" height="470")

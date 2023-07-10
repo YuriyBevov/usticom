@@ -1,0 +1,9 @@
+mixin left-menu(data)
+  .left-menu
+    ul.left-menu__list
+      each item in data.menu
+        li.left-menu__list-item
+          if item.isActive
+            span!= item.name
+          else
+            a(href="#")!= item.name

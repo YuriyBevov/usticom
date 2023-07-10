@@ -1,0 +1,30 @@
+.left-menu {
+  &__list {
+    @extend .list-reset;
+  }
+
+  &__list-item {
+    padding: 15px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid #ececec;
+    }
+
+    a,
+    span {
+      display: flex;
+      font-size: 18px;
+      font-weight: 500;
+      opacity: .5;
+      text-transform: uppercase;
+      @include text-truncate(2);
+      color: var(--primary);
+    }
+
+    a {
+      @extend .hover-opacity;
+    }
+    span {
+      opacity: 1;
+    }
+  }
+}

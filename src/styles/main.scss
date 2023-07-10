@@ -11,7 +11,6 @@
 @import "./layout/main-header";
 @import "./layout/main-footer";
 
-
 /* Компоненты */
 @import "./components/main-logo";
 @import "./components/section-header";
@@ -22,6 +21,12 @@
 @import "./components/subscribe-block";
 @import "./components/callback-form";
 @import "./components/footer-contacts";
+@import "./components/inner-page-top";
+@import "./components/left-menu";
+@import "./components/download-btn";
+
+/*Шаблоны страниц*/
+@import "./views/info-block";
 
 /* Секции */
 @import "./sections/hero";
@@ -31,6 +36,8 @@
 @import "./sections/clients";
 @import "./sections/licenses";
 @import "./sections/callback";
+@import "./sections/content-section";
+
 
 /* Модальные окна */
 

@@ -6,11 +6,11 @@
     --font-family: "Raleway", sans-serif;
     --alt-font-family: "Montserrat", sans-serif;
     --content-width: 1660px;
-    --content-fluid-width: 1790px;
+    --content-fluid-width: 1920px;
     --content-thin-width: 1220px;
     --container-offset: 30px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+    --container-fluid-width: var(--content-fluid-width);
     --container-thin-width: calc(var(--content-thin-width) + (var(--container-offset) * 2));
 
     // colors
@@ -25,6 +25,7 @@
     --light: #f8f8f8;
 
     --main-bg: var(--white);
+    --page-header-bg: var(--light);
 
     //transitions
     --main-transition: .2s ease-in;

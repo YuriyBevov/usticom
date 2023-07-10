@@ -1,0 +1,5 @@
+mixin download-btn(data)
+  a(href="#").lw-main-btn.download-btn
+    span!= data.title
+    svg(width="18" height="18")
+      use(xlink:href="./assets/sprite.svg#icon-download")
