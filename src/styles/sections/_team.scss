@@ -1,0 +1,9 @@
+.team {
+  &__list {
+    @extend .list-reset;
+  }
+
+  &__list-item {
+    margin-bottom: 30px;
+  }
+}

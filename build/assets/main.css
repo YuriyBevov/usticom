@@ -1332,7 +1332,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
+.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1360,7 +1360,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .content-section .dotted-list, .content-section .list, .content-section .price-block > ul, .features__list, .left-menu__list, .news-list, .main-footer__section ul, .main-header__section ul {
+.list-reset, .team__list, .content-section .dotted-list, .content-section .list, .content-section .price-block > ul, .features__list, .left-menu__list, .news-list, .main-footer__section ul, .main-header__section ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1458,6 +1458,9 @@ a {
 .lw-section-offset, .lw-section {
   margin-bottom: 96px;
 }
+.lw-top-section {
+  padding-top: 180px;
+}
 .lw-section-title {
   font-size: 40px;
   font-weight: 700;
@@ -1490,6 +1493,10 @@ a {
   font-weight: 700;
   padding: 20px;
   color: var(--white);
+}
+.lw-main-btn--accent {
+  color: var(--white);
+  background-color: var(--accent);
 }
 .lw-accent-color {
   color: var(--accent);
@@ -2024,6 +2031,47 @@ a {
   fill: var(--accent);
 }
 
+.staff-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 360px auto;
+  grid-template-columns: 360px auto;
+  grid-gap: 30px;
+}
+.staff-card__content {
+  padding: 10px 0;
+}
+.staff-card__title {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.staff-card__desc {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.staff-card__list-title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.staff-card__list {
+  margin-bottom: 30px;
+  list-style: disc;
+}
+.staff-card__list-item {
+  font-size: 18px;
+  font-weight: 500;
+}
+.staff-card__link {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
 /*Шаблоны страниц*/
 .info-block {
   position: relative;
@@ -2504,6 +2552,10 @@ a {
   font-size: 24px;
   font-weight: 700;
   color: var(--accent);
+}
+
+.team__list-item {
+  margin-bottom: 30px;
 }
 
 /* Модальные окна */

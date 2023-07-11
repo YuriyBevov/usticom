@@ -1,0 +1,46 @@
+.staff-card {
+  display: grid;
+  grid-template-columns: 360px auto;
+  grid-gap: 30px;
+
+  &__content {
+    @extend .flex-column;
+    padding: 10px 0;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  &__list-title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+    list-style: disc;
+  }
+
+  &__list-item {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__link {
+    margin-top: auto;
+    margin-bottom: 20px;
+  }
+}
