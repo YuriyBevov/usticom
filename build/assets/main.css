@@ -1464,6 +1464,22 @@ a {
   font-family: var(--alt-font-family);
   margin: 0;
 }
+.lw-accent-title, .content-section .title {
+  display: inline-block;
+  font-family: var(--alt-font-family);
+  font-size: 36px;
+  font-weight: 700;
+  margin: 12px 0;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.lw-subtitle, .content-section .subtitle {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 24px 0 12px;
+  text-transform: uppercase;
+}
 .lw-main-btn {
   width: 100%;
   max-width: -webkit-fit-content;
@@ -2247,21 +2263,22 @@ a {
   margin: 0;
   margin-bottom: 12px;
 }
-.content-section .title {
-  display: inline-block;
-  font-family: var(--alt-font-family);
-  font-size: 36px;
-  font-weight: 700;
-  margin: 12px 0;
-  text-transform: uppercase;
-  color: var(--accent);
+.content-section .video-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 470px;
+  margin: 40px 0;
+  background-color: var(--light);
 }
-.content-section .subtitle {
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 24px 0 12px;
-  text-transform: uppercase;
+.content-section .video-wrapper iframe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  min-height: inherit;
 }
 .content-section .price-block {
   margin-bottom: 40px;
@@ -2348,6 +2365,13 @@ a {
   content: "";
   background-color: var(--accent);
   border-radius: 50%;
+}
+.content-section > ul:not(.list):not(.dotted-list), .content-section > ol:not(.list):not(.dotted-list) {
+  margin-bottom: 40px;
+}
+.content-section > ul:not(.list):not(.dotted-list) li, .content-section > ol:not(.list):not(.dotted-list) li {
+  margin-bottom: 10px;
+  line-height: 1.3;
 }
 
 .audit-steps {
@@ -2472,6 +2496,14 @@ a {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.more__title {
+  display: inline-block;
+  font-family: var(--alt-font-family);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 /* Модальные окна */

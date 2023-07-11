@@ -1,0 +1,9 @@
+.more {
+  &__title {
+    display: inline-block;
+    font-family: var(--alt-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+}

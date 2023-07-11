@@ -31,8 +31,25 @@
     font-size: 40px;
     font-weight: 700;
     font-family: var(--alt-font-family);
-
     margin: 0;
+  }
+
+  &-accent-title {
+    display: inline-block;
+    font-family: var(--alt-font-family);
+    font-size: 36px;
+    font-weight: 700;
+    margin: 12px 0;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  &-subtitle {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+    text-transform: uppercase;
   }
 
   &-main-btn {
