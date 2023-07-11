@@ -1171,6 +1171,7 @@ button.swiper-pagination-bullet {
   --primary: #1f1f1f;
   --accent: #a70a12;
   --gray: #545454;
+  --gray-2: #a8a8a8;
   --text: #7d7d7d;
   --skyblue: #24a4e3;
   --light: #f8f8f8;
@@ -1332,7 +1333,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
+.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .news-card__content, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1360,7 +1361,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .team__list, .content-section .dotted-list, .content-section .list, .content-section .price-block > ul, .features__list, .left-menu__list, .news-list, .main-footer__section ul, .main-header__section ul {
+.list-reset, .news-section__list, .team__list, .content-section .dotted-list, .content-section .list, .content-section .price-block > ul, .features__list, .content-menu__list, .left-menu__list, .news-list, .main-footer__section ul, .main-header__section ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1404,12 +1405,12 @@ a {
 }
 
 /*transitions*/
-.hover-opacity, .left-menu__list-item a, .footer-contacts__field a, .callback-form small a, .info-card__footer span, .section-header a, .main-logo, .main-footer__partnership, .main-footer__nav ul li a, .lw-main-btn {
+.hover-opacity, .news-card__container, .content-menu__list-item a, .left-menu__list-item a, .footer-contacts__field a, .callback-form small a, .info-card__footer span, .section-header a, .main-logo, .main-footer__partnership, .main-footer__nav ul li a, .lw-main-btn {
   -webkit-transition: opacity var(--main-transition);
   -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
-.hover-opacity:hover, .left-menu__list-item a:hover, .footer-contacts__field a:hover, .callback-form small a:hover, .info-card__footer span:hover, .section-header a:hover, .main-logo:hover, .main-footer__partnership:hover, .main-footer__nav ul li a:hover, .lw-main-btn:hover, .hover-opacity:focus, .left-menu__list-item a:focus, .footer-contacts__field a:focus, .callback-form small a:focus, .info-card__footer span:focus, .section-header a:focus, .main-logo:focus, .main-footer__partnership:focus, .main-footer__nav ul li a:focus, .lw-main-btn:focus {
+.hover-opacity:hover, .news-card__container:hover, .content-menu__list-item a:hover, .left-menu__list-item a:hover, .footer-contacts__field a:hover, .callback-form small a:hover, .info-card__footer span:hover, .section-header a:hover, .main-logo:hover, .main-footer__partnership:hover, .main-footer__nav ul li a:hover, .lw-main-btn:hover, .hover-opacity:focus, .news-card__container:focus, .content-menu__list-item a:focus, .left-menu__list-item a:focus, .footer-contacts__field a:focus, .callback-form small a:focus, .info-card__footer span:focus, .section-header a:focus, .main-logo:focus, .main-footer__partnership:focus, .main-footer__nav ul li a:focus, .lw-main-btn:focus {
   opacity: 0.7;
 }
 
@@ -1458,7 +1459,7 @@ a {
 .lw-section-offset, .lw-section {
   margin-bottom: 96px;
 }
-.lw-top-section {
+.lw-top-offset {
   padding-top: 180px;
 }
 .lw-section-title {
@@ -2012,6 +2013,38 @@ a {
   opacity: 1;
 }
 
+.content-menu__list {
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+.content-menu__list:last-of-type {
+  border-top: 1px solid rgba(31, 31, 31, 0.2);
+}
+.content-menu__list-item {
+  padding: 5px 0;
+}
+.content-menu__list-item a {
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.5;
+  text-transform: uppercase;
+  -webkit-line-clamp: 2;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
+  /* Обрезаем всё за пределами блока */
+  color: var(--primary);
+}
+.content-menu__list-item a.active {
+  opacity: 1;
+  color: var(--accent);
+}
+
 .download-btn {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2037,6 +2070,9 @@ a {
   -ms-grid-columns: 360px auto;
   grid-template-columns: 360px auto;
   grid-gap: 30px;
+}
+.staff-card img {
+  height: 100%;
 }
 .staff-card__content {
   padding: 10px 0;
@@ -2070,6 +2106,72 @@ a {
 .staff-card__link {
   margin-top: auto;
   margin-bottom: 20px;
+}
+
+.news-card__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 220px auto;
+  grid-template-columns: 220px auto;
+  grid-gap: 24px;
+}
+.news-card__container:hover .news-card__image-wrapper img, .news-card__container:focus .news-card__image-wrapper img {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+.news-card__image-wrapper {
+  overflow: hidden;
+}
+.news-card__image-wrapper img {
+  height: 100%;
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-transition: -webkit-transform var(--slow-transition);
+  transition: -webkit-transform var(--slow-transition);
+  -o-transition: transform var(--slow-transition);
+  transition: transform var(--slow-transition);
+  transition: transform var(--slow-transition), -webkit-transform var(--slow-transition);
+}
+.news-card__content {
+  padding: 10px 0;
+}
+.news-card__pre {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--gray-2);
+}
+.news-card__title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary);
+  -webkit-line-clamp: 2;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
+  /* Обрезаем всё за пределами блока */
+}
+.news-card__desc {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  -webkit-line-clamp: 3;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
+  /* Обрезаем всё за пределами блока */
 }
 
 /*Шаблоны страниц*/
@@ -2556,6 +2658,16 @@ a {
 
 .team__list-item {
   margin-bottom: 30px;
+}
+
+.news-section:last-child {
+  margin-bottom: 0;
+}
+.news-section:last-child li:last-child {
+  margin-bottom: 0;
+}
+.news-section__list li {
+  margin-bottom: 20px;
 }
 
 /* Модальные окна */

@@ -23,8 +23,10 @@
 @import "./components/footer-contacts";
 @import "./components/inner-page-top";
 @import "./components/left-menu";
+@import "./components/content-menu";
 @import "./components/download-btn";
 @import "./components/staff-card";
+@import "./components/news-card";
 
 /*Шаблоны страниц*/
 @import "./views/info-block";
@@ -40,7 +42,7 @@
 @import "./sections/content-section";
 @import "./sections/more";
 @import "./sections/team";
-
+@import "./sections/news-section";
 
 /* Модальные окна */
 

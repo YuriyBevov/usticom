@@ -1,0 +1,17 @@
+mixin content-menu(data)
+  .content-menu
+    ul.content-menu__list
+      // Наполнение с помощью JS
+      //each item in data.menu
+        li.content-menu__list-item
+          if item.isActive
+            a(href="#").active!= item.name
+          else
+            a(href="#")!= item.name
+
+    if data.links
+      ul.content-menu__list
+        each item in data.links
+          li.content-menu__list-item
+            a(href= item.url)!= item.name
+
