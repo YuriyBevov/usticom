@@ -1,81 +1,83 @@
-import Swiper, { Navigation, EffectFade, Pagination, Controller, Autoplay } from 'swiper';
-Swiper.use([EffectFade, Navigation, Pagination, Controller, Autoplay]);
+import Swiper, {Grid, Navigation, EffectFade, Pagination, Controller, Autoplay } from 'swiper';
+Swiper.use([Controller]);
 
-/*Переделать !!!*/
-const mainSliders = document.querySelectorAll('.main-slider');
+const clientsSlider = document.querySelector('.clients-slider');
 
-if(mainSliders) {
-    mainSliders.forEach(slider => {
-      console.log(slider);
-        const buttonNext = slider.parentNode.querySelector('.main-slider-button-next');
-        const buttonPrev = slider.parentNode.querySelector('.main-slider-button-prev');
-        const isPaginationEnabled = slider.dataset.pagination;
-        const isNavigationEnabled = slider.dataset.navigation;
+if(clientsSlider) {
+  new Swiper(clientsSlider, {
+    modules: [/*Grid,*/ Pagination, Autoplay],
 
-        const slidesPerViewDesktop = slider.dataset.slidesperviewdesktop;
-        const slidesPerViewLaptop  = slider.dataset.slidesperviewlaptop;
-        const slidesPerViewTablet  = slider.dataset.slidesperviewtablet;
-        const slidesPerViewMobile  = slider.dataset.slidesperviewmobile;
-        const slidesPerViewAuto    = slider.dataset.slidesperviewauto;
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    speed: 2500,
 
-        const isAutoplayEnabled    = slider.dataset.autoplay;
-        const autoplayDelay        = slider.dataset.autoplaydelay;
-        const speed                = slider.dataset.speed;
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-        const setPagination = () => {
-          if(!!isPaginationEnabled) {
-            return;
-          }
+    autoplay: !!clientsSlider.dataset.autoplay ? {
+      delay: 1000,
+      disableOnInteraction: false,
+    } : false,
 
-          return {
-            el: ".swiper-pagination",
-            clickable: true,
-          }
-        }
+    /*breakpoints: {
+      535: {
+        slidesPerView: 3,
+        grid: {
+          fill: 'row',
+          rows: 3
+        },
+      },
 
-        const setNavigation = () => {
-          if(!!isNavigationEnabled) {
-            return;
-          }
+      769: {
+        slidesPerView: 'auto',
+        grid: false
+      },
+    }*/
+  });
+}
 
-          return {
-            nextEl: buttonNext,
-            prevEl: buttonPrev,
-          }
-        }
+const licensesSlider = document.querySelector('.licenses-slider');
 
-        const setAutoplay = () => {
-          if(!!isAutoplayEnabled !== true) {
-            return;
-          }
+if(licensesSlider) {
+  new Swiper(licensesSlider, {
+    modules: [Grid, Pagination],
 
-          return {
-            delay: autoplayDelay ? autoplayDelay : 1000,
-            disableOnInteraction: false,
-          }
-        }
+    slidesPerView: 'auto',
+    spaceBetween: 20,
 
-        new Swiper(slider, {
-            slidesPerView: slidesPerViewAuto ? 'auto' : slidesPerViewMobile,
-            spaceBetween: 20,
-            pagination: setPagination(),
-            navigation: setNavigation(),
-            /*autoplay: setAutoplay(),
-            speed: speed ? speed : 1000,*/
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 
-            breakpoints: {
-              534: {
-                slidesPerView: slidesPerViewTablet ? slidesPerViewTablet : null
-              },
+    breakpoints: {
+      535: {
+        slidesPerView: 2,
+        grid: {
+          fill: 'row',
+          rows: 2
+        },
+      },
 
-              769: {
-                slidesPerView: slidesPerViewLaptop ? slidesPerViewLaptop : null
-              },
+      769: {
+        slidesPerView: 3,
+        grid: false
+      },
 
-              1025: {
-                slidesPerView: slidesPerViewDesktop ? slidesPerViewDesktop : null
-              }
-            }
-        });
-   });
+      1025: {
+        slidesPerView: 4
+      }
+    }
+  });
+}
+
+const featureCardSlider = document.querySelector('.feature-card-slider');
+
+if(featureCardSlider) {
+  new Swiper(featureCardSlider, {
+    slidesPerView: 'auto',
+    spaceBetween: 10,
+  });
 }

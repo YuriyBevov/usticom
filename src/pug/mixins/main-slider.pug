@@ -2,16 +2,7 @@ mixin main-slider(data)
 
   .swiper.main-slider(
     class= data.cls ? data.cls : null
-    data-pagination= data.isPaginationEnabled ? data.isPaginationEnabled : null
-    data-navigation= data.isNavigationEnabled ? data.isNavigationEnabled : null
-    data-slidesPerViewDesktop= data.slidesPerViewDesktop ? data.slidesPerViewDesktop : null
-    data-slidesPerViewLaptop= data.slidesPerViewLaptop ? data.slidesPerViewLaptop : null
-    data-slidesPerViewTablet= data.slidesPerViewTablet ? data.slidesPerViewTablet : null
-    data-slidesPerViewMobile= data.slidesPerViewMobile ? data.slidesPerViewMobile : null
-    data-slidesPerViewAuto= data.slidesPerViewAuto ? data.slidesPerViewAuto : null
-    data-autoplay= data.autoplay ? data.autoplay : null
-    data-autoplayDelay= data.autoplayDelay ? data.autoplayDelay : null
-    data-speed= data.speed ? data.speed : null
+    data-autoplay= !!data.isAutoplayEnabled ? 'true' : null
   )
     .swiper-wrapper
       each slide in data.slides

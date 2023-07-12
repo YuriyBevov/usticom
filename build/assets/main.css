@@ -1335,7 +1335,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .feature-card, .icons-grid__item, .staff-preview-card__content, .news-card__content, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
+.flex-column, .audit-steps__section-content, .content-section .price-block--column li, .subscription__content, .features__list-item, .hero__container, .feature-card, .icons-grid__item, .staff-preview-card__content, .news-card__content, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2291,6 +2291,7 @@ a {
   display: inline-block;
   font-size: 12px;
   font-weight: 500;
+  margin-top: 0;
   margin-bottom: 24px;
   color: var(--gray);
 }
@@ -2565,6 +2566,9 @@ a {
 .content-section .price-block {
   margin-bottom: 40px;
 }
+.content-section .price-block > .title {
+  text-transform: initial;
+}
 .content-section .price-block > ul {
   border: 1px solid var(--light);
   margin-bottom: 40px;
@@ -2576,17 +2580,37 @@ a {
   padding: 17px 80px 15px;
   border-bottom: 1px solid var(--light);
 }
-.content-section .price-block > ul li span {
+.content-section .price-block__title {
   width: 50%;
   font-size: 18px;
   font-weight: 400;
+  -webkit-line-clamp: 2;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
+  /* Обрезаем всё за пределами блока */
 }
-.content-section .price-block > ul li span > span {
-  font-weight: 700;
+.content-section .price-block__title > b {
+  font-weight: 600;
 }
-.content-section .price-block > ul li span:nth-child(even) {
+.content-section .price-block__value {
   max-width: 170px;
   color: var(--accent);
+}
+.content-section .price-block small {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.content-section .price-block--column .price-block__title {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.content-section .price-block--column .price-block__value {
+  max-width: 100%;
 }
 .content-section .button-block {
   width: 100%;
