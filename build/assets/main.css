@@ -1171,7 +1171,9 @@ button.swiper-pagination-bullet {
   --primary: #1f1f1f;
   --accent: #a70a12;
   --gray: #545454;
+  --brown: #37393f;
   --gray-2: #a8a8a8;
+  --gray-3: #d9d9d9;
   --text: #7d7d7d;
   --skyblue: #24a4e3;
   --light: #f8f8f8;
@@ -1321,7 +1323,7 @@ a {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .features__list-item-icon, .social__list-item a, .main-logo, .lw-main-btn {
+.flex-centered-content, .features__list-item-icon, .icons-grid__item-icon, .social__list-item a, .main-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1333,7 +1335,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .news-card__content, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
+.flex-column, .audit-steps__section-content, .subscription__content, .features__list-item, .hero__container, .feature-card, .icons-grid__item, .staff-preview-card__content, .news-card__content, .staff-card__content, .footer-contacts__field, .callback-form form, .info-card__header, .info-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1423,7 +1425,7 @@ a {
   color: var(--accent);
 }
 
-.hover-image-scale, .info-card:hover .info-card__header img, .info-card:focus .info-card__header img {
+.hover-image-scale, .staff-preview-card img, .info-card:hover .info-card__header img, .info-card:focus .info-card__header img {
   -webkit-transform: scale(1.01);
   -ms-transform: scale(1.01);
   transform: scale(1.01);
@@ -1433,7 +1435,7 @@ a {
   transition: transform var(--slow-transition);
   transition: transform var(--slow-transition), -webkit-transform var(--slow-transition);
 }
-.hover-image-scale:hover, .info-card:hover .info-card__header img:hover, .info-card:focus .info-card__header img:hover, .hover-image-scale:focus, .info-card:hover .info-card__header img:focus, .info-card:focus .info-card__header img:focus {
+.hover-image-scale:hover, .staff-preview-card img:hover, .info-card:hover .info-card__header img:hover, .info-card:focus .info-card__header img:hover, .hover-image-scale:focus, .staff-preview-card img:focus, .info-card:hover .info-card__header img:focus, .info-card:focus .info-card__header img:focus {
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);
@@ -1473,7 +1475,7 @@ a {
   font-family: var(--alt-font-family);
   font-size: 36px;
   font-weight: 700;
-  margin: 12px 0;
+  margin: 15px 0;
   text-transform: uppercase;
   color: var(--accent);
 }
@@ -1492,7 +1494,8 @@ a {
   font-family: var(--alt-font-family);
   font-size: 18px;
   font-weight: 700;
-  padding: 20px;
+  padding: 16px 20px;
+  padding-top: 18px;
   color: var(--white);
 }
 .lw-main-btn--accent {
@@ -2174,6 +2177,132 @@ a {
   /* Обрезаем всё за пределами блока */
 }
 
+.team-preview-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.staff-preview-card {
+  position: relative;
+  overflow: hidden;
+}
+.staff-preview-card img {
+  display: block;
+  height: 100%;
+}
+.staff-preview-card__content {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  padding: 15px 12px;
+  width: calc(100% - 30px);
+  min-height: 85px;
+  background-color: var(--white);
+}
+.staff-preview-card__title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px;
+  color: var(--brown);
+}
+.staff-preview-card__desc {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  color: var(--text);
+}
+
+.icons-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  margin-top: 35px;
+}
+.icons-grid__item {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  outline: 1px solid var(--gray-3);
+  padding: 35px 10px;
+  min-height: 250px;
+  background-color: var(--light);
+  border-collapse: collapse;
+}
+.icons-grid__item-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  background-color: var(--white);
+}
+.icons-grid__item-icon img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.icons-grid__item span {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: var(--gray);
+}
+
+.feature-card {
+  padding: 20px 15px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid var(--gray-3);
+  background-color: var(--white);
+}
+.feature-card__title {
+  font-family: var(--alt-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 36px;
+  text-transform: uppercase;
+  color: var(--accent);
+  -webkit-line-clamp: 2;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
+  /* Обрезаем всё за пределами блока */
+}
+.feature-card__desc {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--gray);
+}
+
+.feature-card-slider {
+  margin: 35px 0;
+}
+.feature-card-slider .swiper-slide {
+  max-width: 200px;
+  height: auto;
+}
+
 /*Шаблоны страниц*/
 .info-block {
   position: relative;
@@ -2211,6 +2340,9 @@ a {
   text-transform: uppercase;
   margin-bottom: 50px;
   color: var(--accent);
+}
+.info-block__content section:last-child {
+  margin-bottom: 0;
 }
 
 /* Секции */
@@ -2406,7 +2538,7 @@ a {
   padding: 54px 0;
 }
 
-.content-section p {
+.content-section > p {
   font-size: 18px;
   font-weight: 400;
   color: var(--gray);
@@ -2497,6 +2629,7 @@ a {
 .content-section .dotted-list li {
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 10px;
   color: var(--gray);
 }
 .content-section .dotted-list li span {
@@ -2515,6 +2648,10 @@ a {
   content: "";
   background-color: var(--accent);
   border-radius: 50%;
+}
+.content-section .dotted-list li p {
+  margin: 0;
+  margin-bottom: 10px;
 }
 .content-section > ul:not(.list):not(.dotted-list), .content-section > ol:not(.list):not(.dotted-list) {
   margin-bottom: 40px;

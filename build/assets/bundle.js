@@ -45,7 +45,7 @@ if (titles) {
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(window, {
       duration: 1.5,
       scrollTo: {
-        y: anchor.offsetTop + topOffset - (headerOffset + 150),
+        y: anchor.offsetTop + topOffset - (headerOffset + 170),
         autoKill: true
       },
       ease: 'ease-in'

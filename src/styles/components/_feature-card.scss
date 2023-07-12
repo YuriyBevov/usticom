@@ -1,0 +1,27 @@
+.feature-card {
+  @extend .flex-column;
+  padding: 20px 15px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid var(--gray-3);
+  background-color: var(--white);
+
+  &__title {
+    font-family: var(--alt-font-family);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    color: var(--accent);
+
+    @include text-truncate(2);
+  }
+
+  &__desc {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    color: var(--gray);
+  }
+}

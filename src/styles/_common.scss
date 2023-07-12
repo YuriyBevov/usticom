@@ -43,7 +43,7 @@
     font-family: var(--alt-font-family);
     font-size: 36px;
     font-weight: 700;
-    margin: 12px 0;
+    margin: 15px 0;
     text-transform: uppercase;
     color: var(--accent);
   }
@@ -57,14 +57,14 @@
   }
 
   &-main-btn {
-    @extend .flex-centered-content;
     @extend .btn-reset;
     width: 100%;
     max-width: fit-content;
     font-family: var(--alt-font-family);
     font-size: 18px;
     font-weight: 700;
-    padding: 20px;
+    padding: 16px 20px;
+    padding-top: 18px;
     color: var(--white);
 
     @extend .hover-opacity;

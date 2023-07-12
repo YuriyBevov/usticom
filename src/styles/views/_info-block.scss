@@ -28,4 +28,10 @@
       color: var(--accent);
     }
   }
+
+  &__content {
+    section:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

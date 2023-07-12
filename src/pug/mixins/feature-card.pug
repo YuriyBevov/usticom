@@ -1,0 +1,5 @@
+mixin feature-card(data)
+  .feature-card
+    span.feature-card__title!= data.title
+    each text in data.description
+      p.feature-card__desc!= text

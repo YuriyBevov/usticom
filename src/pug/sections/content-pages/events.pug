@@ -1,0 +1,97 @@
+include ../../mixins/section-header
+include ../../mixins/inner-page-top
+include ../../mixins/content-menu
+
++inner-page-top({
+  title: 'События',
+  img: 'page-header-bg.jpg'
+})
+
+.lw-container-thin.info-block
+  .info-block__sidebar
+    span.info-block__sidebar-title ПОДРОБНЕЕ
+    +content-menu({
+      menu: [],
+
+      links: [
+        {
+          name: 'ДОКУМЕНТЫ И ГАРАНТИИ',
+          url: '#'
+        },
+        {
+          name: 'ОТЗЫВЫ И КЛИЕНты',
+          url: '#'
+        }
+      ]
+    })
+
+  .info-block__content
+    section.lw-section.news-section
+      +section-header({
+        tag: 'span',
+        title: 'Новости',
+        titleClass: 'lw-accent-title js-content-menu-item',
+        linkText: 'Все',
+        linkUrl: '#'
+      })
+
+      ul.news-section__list
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+
+    section.lw-section.news-section
+      +section-header({
+        tag: 'span',
+        title: 'Публикации',
+        titleClass: 'lw-accent-title js-content-menu-item',
+        linkText: 'Все',
+        linkUrl: '#'
+      })
+
+      ul.news-section__list
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+
+    section.lw-section.news-section
+      +section-header({
+        tag: 'span',
+        title: 'Мероприятия',
+        titleClass: 'lw-accent-title js-content-menu-item',
+        linkText: 'Все',
+        linkUrl: '#'
+      })
+
+      ul.news-section__list
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+        li
+          include ../../components/news-card
+

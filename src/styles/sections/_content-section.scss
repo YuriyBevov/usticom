@@ -1,5 +1,5 @@
 .content-section {
-  p {
+  & > p {
     font-size: 18px;
     font-weight: 400;
     color: var(--gray);
@@ -112,6 +112,7 @@
     li {
       font-size: 18px;
       font-weight: 500;
+      margin-bottom: 10px;
       color: var(--gray);
 
       span {
@@ -130,6 +131,10 @@
           background-color: var(--accent);
           border-radius: 50%;
         }
+      }
+      p {
+        margin: 0;
+        margin-bottom: 10px;
       }
     }
   }

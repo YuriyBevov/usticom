@@ -1,0 +1,11 @@
+include ./feature-card
+
+mixin feature-card-slider(data)
+  .swiper(class= data.cls ? data.cls : null)
+    .swiper-wrapper
+      each slide in data.slides
+        .swiper-slide
+          +feature-card({
+            title: slide.title,
+            description: slide.description
+          })

@@ -24,7 +24,6 @@ if(titles) {
     link.setAttribute('data-id', index);
     link.textContent = title.textContent;
     menu.appendChild(node);
-
   });
 
   const onClickScrollToAnchor = (evt) => {
@@ -33,7 +32,7 @@ if(titles) {
     const topOffset = document.querySelector('.info-block').offsetTop;
     const headerOffset = document.querySelector('.main-header__section--bottom').offsetTop;
 
-    gsap.to(window, {duration: 1.5, scrollTo: {y: (anchor.offsetTop + topOffset) - (headerOffset + 150) , autoKill: true}, ease: 'ease-in'});
+    gsap.to(window, {duration: 1.5, scrollTo: {y: (anchor.offsetTop + topOffset) - (headerOffset + 170) , autoKill: true}, ease: 'ease-in'});
 
   }
 

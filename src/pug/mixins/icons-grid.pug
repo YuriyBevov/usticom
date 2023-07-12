@@ -1,0 +1,7 @@
+mixin icons-grid(data)
+  .icons-grid
+    each item in data.items
+      .icons-grid__item
+        .icons-grid__item-icon
+          img(src=`./assets/img/sector-icons/${item.icon}` alt= item.title)
+        span!= item.title

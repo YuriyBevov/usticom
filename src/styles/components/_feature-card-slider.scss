@@ -1,0 +1,11 @@
+.feature-card-slider {
+  margin: 35px 0;
+
+  .swiper {
+
+    &-slide {
+      max-width: 200px;
+      height: auto;
+    }
+  }
+}
