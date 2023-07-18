@@ -2,6 +2,14 @@
   &__container {
     padding: 65px 0 60px;
     background-color: var(--light);
+
+    @include m-b-desktop-down {
+      padding: 35px 30px;
+    }
+
+    @include m-b-laptop-down {
+      padding: 35px 0;
+    }
   }
 
   &__list {
@@ -9,14 +17,46 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     height: 100%;
+
+    @include m-b-down(1420px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__list-item {
     @extend .flex-column;
 
+    @include m-b-down(1420px) {
+      flex-direction: row;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include m-b-mobile-lg-down {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
     &-header {
       padding: 0 30px;
       margin-bottom: 7px;
+
+      @include m-b-desktop-down {
+        padding: 0 20px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding: 0;
+        padding-right: 20px;
+        margin-bottom: 20px;
+      }
     }
 
     &-icon {
@@ -28,17 +68,39 @@
 
       img {
         object-fit: contain;
+
+        @include m-b-mobile-lg-down {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      @include m-b-mobile-lg-down {
+        width: 50px;
+        height: 50px;
       }
     }
 
     &-content {
       flex-grow: 1;
       padding: 25px 30px;
+
+      @include m-b-desktop-down {
+        padding: 20px;
+      }
+
+      @include m-b-down(1420px) {
+        padding: 0;
+      }
     }
 
     &:not(:last-child) {
       .features__list-item-content {
         border-right: 1px solid rgba(35,31,32, .1);
+
+        @include m-b-down(1420px) {
+          border-right: none;
+        }
       }
     }
 
@@ -47,12 +109,28 @@
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 20px;
+
+      @include m-b-desktop-down {
+        font-size: 16px;
+      }
+
+      @include m-b-mobile-lg-down {
+        margin-bottom: 10px;
+      }
     }
 
     &-text {
       font-size: 18px;
       font-weight: 500;
       color: var(--text);
+
+      @include m-b-desktop-down {
+        font-size: 16px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 14px;
+      }
     }
   }
 }

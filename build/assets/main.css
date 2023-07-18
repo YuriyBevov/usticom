@@ -1746,11 +1746,26 @@ a {
   background-color: var(--gray);
   z-index: 2;
 }
+@media (max-width: 767px) {
+  .info-card__header-date {
+    padding: 14px 16px;
+  }
+}
 .info-card__header-date span {
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
   color: var(--white);
+}
+@media (max-width: 767px) {
+  .info-card__header-date span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 533px) {
+  .info-card__header-date span {
+    font-size: 14px;
+  }
 }
 .info-card__body-title {
   display: inline-block;
@@ -1952,6 +1967,16 @@ a {
   padding: 40px 60px 25px 90px;
   background-color: var(--white);
 }
+@media (max-width: 1023px) {
+  .callback-form {
+    padding: 40px;
+  }
+}
+@media (max-width: 533px) {
+  .callback-form {
+    padding: 30px 20px;
+  }
+}
 .callback-form__title {
   display: inline-block;
   font-family: var(--alt-font-family);
@@ -1959,6 +1984,18 @@ a {
   font-weight: 700;
   letter-spacing: 0.2px;
   margin-bottom: 30px;
+}
+@media (max-width: 1023px) {
+  .callback-form__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 533px) {
+  .callback-form__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 }
 .callback-form label {
   font-family: var(--alt-font-family);
@@ -1980,6 +2017,16 @@ a {
 .callback-form input {
   margin-bottom: 16px;
   min-height: 50px;
+}
+@media (max-width: 1023px) {
+  .callback-form input {
+    min-height: 40px;
+  }
+}
+@media (max-width: 533px) {
+  .callback-form input {
+    margin-bottom: 12px;
+  }
 }
 .callback-form input::-webkit-input-placeholder {
   font-size: 16px;
@@ -2615,6 +2662,16 @@ a {
   padding: 65px 0 60px;
   background-color: var(--light);
 }
+@media (max-width: 1719px) {
+  .features__container {
+    padding: 35px 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .features__container {
+    padding: 35px 0;
+  }
+}
 .features__list {
   display: -ms-grid;
   display: grid;
@@ -2622,9 +2679,55 @@ a {
   grid-template-columns: repeat(5, 1fr);
   height: 100%;
 }
+@media (max-width: 1420px) {
+  .features__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1420px) {
+  .features__list-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .features__list-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 533px) {
+  .features__list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .features__list-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
 .features__list-item-header {
   padding: 0 30px;
   margin-bottom: 7px;
+}
+@media (max-width: 1719px) {
+  .features__list-item-header {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 533px) {
+  .features__list-item-header {
+    padding: 0;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
 }
 .features__list-item-icon {
   width: 72px;
@@ -2636,14 +2739,41 @@ a {
   -o-object-fit: contain;
   object-fit: contain;
 }
+@media (max-width: 533px) {
+  .features__list-item-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 533px) {
+  .features__list-item-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
 .features__list-item-content {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   padding: 25px 30px;
 }
+@media (max-width: 1719px) {
+  .features__list-item-content {
+    padding: 20px;
+  }
+}
+@media (max-width: 1420px) {
+  .features__list-item-content {
+    padding: 0;
+  }
+}
 .features__list-item:not(:last-child) .features__list-item-content {
   border-right: 1px solid rgba(35, 31, 32, 0.1);
+}
+@media (max-width: 1420px) {
+  .features__list-item:not(:last-child) .features__list-item-content {
+    border-right: none;
+  }
 }
 .features__list-item-title {
   display: inline-block;
@@ -2651,10 +2781,30 @@ a {
   font-weight: 700;
   margin-bottom: 20px;
 }
+@media (max-width: 1719px) {
+  .features__list-item-title {
+    font-size: 16px;
+  }
+}
+@media (max-width: 533px) {
+  .features__list-item-title {
+    margin-bottom: 10px;
+  }
+}
 .features__list-item-text {
   font-size: 18px;
   font-weight: 500;
   color: var(--text);
+}
+@media (max-width: 1719px) {
+  .features__list-item-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 533px) {
+  .features__list-item-text {
+    font-size: 14px;
+  }
 }
 
 .subscription {

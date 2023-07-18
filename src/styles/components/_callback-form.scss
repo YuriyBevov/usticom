@@ -4,6 +4,14 @@
   padding: 40px 60px 25px 90px;
   background-color: var(--white);
 
+  @include m-b-laptop-down {
+    padding: 40px;
+  }
+
+  @include m-b-mobile-lg-down {
+    padding: 30px 20px;
+  }
+
   &__title {
     display: inline-block;
     font-family: var(--alt-font-family);
@@ -11,6 +19,16 @@
     font-weight: 700;
     letter-spacing: 0.2px;
     margin-bottom: 30px;
+
+    @include m-b-laptop-down {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
   }
 
   form {
@@ -40,6 +58,14 @@
   input {
     margin-bottom: 16px;
     min-height: 50px;
+
+    @include m-b-laptop-down {
+      min-height: 40px;
+    }
+
+    @include m-b-mobile-lg-down {
+      margin-bottom: 12px;
+    }
 
     &::placeholder {
       font-size: 16px;

@@ -39,11 +39,23 @@
       background-color: var(--gray);
       z-index: 2;
 
+      @include m-b-tablet-down {
+        padding: 14px 16px;
+      }
+
       span {
         font-size: 18px;
         font-weight: 700;
         line-height: 1;
         color: var(--white);
+
+        @include m-b-tablet-down {
+          font-size: 16px;
+        }
+
+        @include m-b-mobile-lg-down {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -107,6 +119,4 @@
       display: none;
     }
   }
-
-
 }
