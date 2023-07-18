@@ -10,6 +10,14 @@
 
     &:not(:last-child) {
       padding-right: 95px;
+
+      @include m-b-tablet-down {
+        padding-right: 50px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding-right: 30px;
+      }
     }
 
     img {
@@ -20,6 +28,10 @@
       &:hover,
       &:focus {
         filter: none;
+      }
+
+      @include m-b-tablet-down {
+        max-height: 74px;
       }
     }
   }

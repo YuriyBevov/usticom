@@ -9,6 +9,21 @@
   background-size: cover;
   background-position: center;
 
+  @include m-b-desktop-down {
+    min-height: 634px;
+    max-height: 768px;
+  }
+
+  @include m-b-laptop-down {
+    min-height: 534px;
+    max-height: 668px;
+  }
+
+  @include m-b-mobile-lg-down {
+    min-height: 420px;
+    max-height: 520px;
+  }
+
   &::after {
     position: absolute;
     top: 0;
@@ -28,6 +43,15 @@
     height: 100%;
     z-index: 2;
     padding: 80px;
+
+    @include m-b-desktop-down {
+      padding: 35px;
+    }
+
+    @include m-b-mobile-lg-down {
+      padding: 20px;
+      padding-top: 64px;
+    }
   }
 
   &__intro {
@@ -36,6 +60,14 @@
     font-weight: 500;
     margin-bottom: 10px;
     color: var(--white);
+
+    @include m-b-tablet-down {
+      font-size: 18px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 
   &__title {
@@ -45,6 +77,22 @@
     margin: 0;
     margin-bottom: 20px;
     color: var(--white);
+
+    @include m-b-desktop-down {
+      font-size: 64px;
+    }
+
+    @include m-b-laptop-down {
+      font-size: 54px;
+    }
+
+    @include m-b-tablet-down {
+      font-size: 48px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -52,11 +100,29 @@
     font-weight: 500;
     margin-bottom: 45px;
     color: var(--white);
+
+    @include m-b-laptop-down {
+      font-size: 24px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 16px;
+    }
   }
 
   button {
     max-width: 210px;
+    min-height: 66px;
     color: var(--accent);
     background-color: var(--white);
+
+    @include m-b-desktop-down {
+      min-height: 54px;
+    }
+
+    @include m-b-mobile-lg-down {
+      margin-top: auto;
+      min-height: 48px;
+    }
   }
 }

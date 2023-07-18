@@ -5,7 +5,7 @@ const clientsSlider = document.querySelector('.clients-slider');
 
 if(clientsSlider) {
   new Swiper(clientsSlider, {
-    modules: [/*Grid,*/ Pagination, Autoplay],
+    modules: [Pagination, Autoplay],
 
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -20,21 +20,6 @@ if(clientsSlider) {
       delay: 1000,
       disableOnInteraction: false,
     } : false,
-
-    /*breakpoints: {
-      535: {
-        slidesPerView: 3,
-        grid: {
-          fill: 'row',
-          rows: 3
-        },
-      },
-
-      769: {
-        slidesPerView: 'auto',
-        grid: false
-      },
-    }*/
   });
 }
 
@@ -42,7 +27,7 @@ const licensesSlider = document.querySelector('.licenses-slider');
 
 if(licensesSlider) {
   new Swiper(licensesSlider, {
-    modules: [Grid, Pagination],
+    modules: [/*Grid,*/ Pagination],
 
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -55,10 +40,10 @@ if(licensesSlider) {
     breakpoints: {
       535: {
         slidesPerView: 2,
-        grid: {
+        /*grid: {
           fill: 'row',
           rows: 2
-        },
+        },*/
       },
 
       769: {

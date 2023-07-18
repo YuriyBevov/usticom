@@ -3,6 +3,10 @@
     margin: 0 auto;
     padding: 0 var(--container-offset);
     max-width: var(--container-width);
+
+    @include m-b-mobile-lg-down {
+      padding: 0 20px;
+    }
   }
 
   &-container-fluid {
@@ -21,6 +25,14 @@
 
   &-section-offset {
     margin-bottom: 96px;
+
+    @include m-b-desktop-down {
+      margin-bottom: 54px;
+    }
+
+    @include m-b-laptop-down {
+      margin-bottom: 36px;
+    }
   }
 
   &-section {
@@ -36,6 +48,23 @@
     font-weight: 700;
     font-family: var(--alt-font-family);
     margin: 0;
+    padding-right: 20px;
+
+    @include m-b-desktop-down {
+      font-size: 32px;
+    }
+
+    @include m-b-laptop-down {
+      font-size: 28px;
+    }
+
+    @include m-b-tablet-down {
+      font-size: 24px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 18px;
+    }
   }
 
   &-accent-title {
@@ -58,13 +87,17 @@
 
   &-main-btn {
     @extend .btn-reset;
+    @extend .flex-centered-content;
     width: 100%;
     max-width: fit-content;
+    height: fit-content;
+    min-height: 40px;
+    padding: 0 15px;
     font-family: var(--alt-font-family);
     font-size: 18px;
     font-weight: 700;
-    padding: 16px 20px;
-    padding-top: 18px;
+    line-height: 1;
+
     color: var(--white);
 
     @extend .hover-opacity;
@@ -72,6 +105,10 @@
     &--accent {
       color: var(--white);
       background-color: var(--accent);
+    }
+
+    @include m-b-tablet-down {
+      font-size: 16px;
     }
   }
 

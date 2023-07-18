@@ -1,8 +1,20 @@
 .section-header {
-  @extend .flex-wrap;
+  display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 32px;
+
+  @include m-b-desktop-down {
+    margin-bottom: 24px;
+  }
+
+  @include m-b-laptop-down {
+    margin-bottom: 20px;
+  }
+
+  @include m-b-mobile-lg-down {
+    margin-bottom: 18px;
+  }
 
   a {
     font-family: var(--alt-font-family);
@@ -11,5 +23,9 @@
     color: var(--accent);
 
     @extend .hover-opacity;
+
+    @include m-b-mobile-lg-down {
+      font-size: 16px;
+    }
   }
 }

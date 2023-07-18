@@ -6,5 +6,19 @@
 
   &__item {
     height: 100%;
+
+    @include m-b-laptop-down {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  @include m-b-laptop-down {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m-b-down(724px) {
+    grid-template-columns: 1fr;
   }
 }

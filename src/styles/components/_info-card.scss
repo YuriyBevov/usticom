@@ -1,9 +1,13 @@
 .info-card {
   @extend .flex-column;
   width: 100%;
-  max-width: 540px;
+
   height: 100%;
   color: var(--primary);
+
+  @include m-b-down(724px) {
+    max-width: 100%;
+  }
 
   &:hover,
   &:focus {
@@ -52,6 +56,22 @@
       margin-bottom: 12px;
 
       @include text-truncate(2);
+
+      @include m-b-desktop-down {
+        font-size: 26px;
+      }
+
+      @include m-b-laptop-down {
+        font-size: 24px;
+      }
+
+      @include m-b-down(724px) {
+        font-size: 20px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 16px;
+      }
     }
 
     &-text {
@@ -60,6 +80,14 @@
       margin: 0;
       margin-bottom: 26px;
       @include text-truncate(3);
+
+      @include m-b-down(724px) {
+        font-size: 16px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 14px;
+      }
     }
   }
 
@@ -73,6 +101,10 @@
       font-weight: 700;
       color: var(--primary);
       @extend .hover-opacity;
+    }
+
+    @include m-b-down(724px) {
+      display: none;
     }
   }
 
