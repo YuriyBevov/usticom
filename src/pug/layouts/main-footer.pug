@@ -1,10 +1,11 @@
 footer.main-footer
   .lw-container-thin
-    .main-footer__section
+    .main-footer__section.main-footer__section--top
       .main-footer__logo
         include ../components/main-logo
 
       include ../components/footer-contacts
+      include ../components/social
 
     .main-footer__section.main-footer__section--middle
       nav.main-footer__nav
@@ -30,5 +31,6 @@ footer.main-footer
 
       include ../components/subscribe-block
 
-    .main-footer__section
+    .main-footer__section.main-footer__section--bottom
+      include ../components/footer-contacts
       include ../components/social

@@ -2,12 +2,26 @@
   padding: 40px;
   background-color: #d9d9d9;
 
+  @include m-b-mobile-lg-down {
+    padding: 30px 20px;
+  }
+
+  &__container {
+    @extend .flex-column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
   &__title {
     display: inline-block;
     font-family: var(--alt-font-family);
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 8px;
+
+    @include m-b-mobile-lg-down {
+      font-size: 18px;
+    }
   }
 
   &__text {
@@ -15,12 +29,22 @@
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 20px;
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 
   form {
     display: flex;
     align-items: center;
     height: 65px;
+
+    @include m-b-mobile-lg-down {
+      height: initial;
+      flex-direction: column;
+      align-items: flex-start
+    }
 
     input[type="text"] {
       @extend .input-reset;
@@ -33,6 +57,17 @@
       &::placeholder {
         font-size: 18px;
         font-weight: 500;
+
+        @include m-b-mobile-lg-down {
+          font-size: 16px;
+        }
+      }
+
+      @include m-b-mobile-lg-down {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 15px 10px;
+        font-size: 16px;
       }
     }
   }
@@ -43,5 +78,9 @@
     font-weight: 700;
     height: inherit;
     background-color: var(--accent);
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 }
