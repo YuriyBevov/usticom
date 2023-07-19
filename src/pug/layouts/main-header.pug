@@ -9,5 +9,8 @@ header.main-header
     .lw-container.main-header__container
       include ../components/main-logo
       include ../components/main-nav
+      button(type="button" aria-label="Открыть меню").main-nav__opener
+        svg(width="24" height="24")
+          use(xlink:href="./assets/sprite.svg#icon-burger")
 
 

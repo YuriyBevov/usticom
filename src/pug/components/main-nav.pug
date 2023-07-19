@@ -1,5 +1,11 @@
 nav.main-nav
-  button(type="button" aria-label="Открыть меню").main-nav__opener открыть
+  .main-nav__header
+    include ../components/nav-logo
+
+    button(type="button" aria-label="Закрыть меню").main-nav__closer
+      svg(width="24" height="24")
+        use(xlink:href="./assets/sprite.svg#icon-burger")
+
   ul.main-nav__list
     li.main-nav__list-item.has-inner
       a(href="#") Услуги
@@ -100,3 +106,7 @@ nav.main-nav
 
     li.main-nav__list-item.main-nav__list-item--accent
       a(href="#") Партнерская программа
+
+  .main-nav__footer
+    include ../components/company-phone
+    include ../components/company-mail
