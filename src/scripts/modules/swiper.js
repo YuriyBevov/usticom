@@ -1,5 +1,4 @@
-import Swiper, {Grid, Navigation, EffectFade, Pagination, Controller, Autoplay } from 'swiper';
-Swiper.use([Controller]);
+import Swiper, {Pagination, Autoplay } from 'swiper';
 
 const clientsSlider = document.querySelector('.clients-slider');
 
@@ -27,7 +26,7 @@ const licensesSlider = document.querySelector('.licenses-slider');
 
 if(licensesSlider) {
   new Swiper(licensesSlider, {
-    modules: [/*Grid,*/ Pagination],
+    modules: [Pagination],
 
     slidesPerView: 'auto',
     spaceBetween: 20,
@@ -40,10 +39,6 @@ if(licensesSlider) {
     breakpoints: {
       535: {
         slidesPerView: 2,
-        /*grid: {
-          fill: 'row',
-          rows: 2
-        },*/
       },
 
       769: {

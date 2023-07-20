@@ -10,6 +10,10 @@
     flex-direction: column;
   }
 
+  @include m-b-down(1280px) {
+    grid-template-columns: 1fr;
+  }
+
   &__sidebar {
     position: sticky;
     top: 130px;
@@ -26,6 +30,10 @@
       text-transform: uppercase;
       margin-bottom: 50px;
       color: var(--accent);
+    }
+
+    @include m-b-down(1280px) {
+      display: none;
     }
   }
 
