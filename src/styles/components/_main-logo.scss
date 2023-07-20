@@ -1,4 +1,13 @@
 .main-logo {
   @extend .flex-centered-content;
   @extend .hover-opacity;
+
+  @include m-b-mobile-lg-down {
+    width: 130px;
+  }
+}
+
+.nav-logo {
+  @extend .flex-centered-content;
+  @extend .hover-opacity;
 }

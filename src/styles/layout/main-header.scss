@@ -5,6 +5,10 @@
   background-color: var(--white);
   box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.14);
 
+  @include m-b-down(1280px) {
+    top: 0;
+  }
+
   &__container {
     @extend .flex-wrap;
     align-items: center;

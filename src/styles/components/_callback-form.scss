@@ -85,7 +85,13 @@
     max-width: 480px;
     margin: 0 auto;
     margin-bottom: 18px;
+    min-height: 58px;
     background-color: var(--accent);
+
+    /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+    @include m-b-tablet-down {
+      min-height: 48px;
+    }
   }
 
   small {
