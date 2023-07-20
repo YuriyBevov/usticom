@@ -1826,6 +1826,7 @@ a {
   cursor: pointer;
   width: 40px;
   height: 40px;
+  margin-left: auto;
 }
 .main-nav__opener svg {
   fill: var(--accent);
@@ -1836,9 +1837,6 @@ a {
     display: -ms-flexbox;
     display: flex;
   }
-}
-.main-nav__closer {
-  margin-left: auto;
 }
 .main-nav__closer svg {
   fill: var(--white);
@@ -2099,6 +2097,7 @@ a {
 @media (max-width: 533px) {
   .main-nav--mobile.active .main-nav__footer {
     padding: 35px 20px;
+    padding-bottom: 60px;
   }
 }
 .main-nav--mobile.active .main-nav__footer a span {
@@ -2135,7 +2134,6 @@ a {
   font-family: var(--alt-font-family);
   padding: 10px 0;
   color: var(--white);
-  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
 }
 .main-nav--mobile.active .main-nav__list-item a svg {
   fill: var(--gray-2);
@@ -3340,6 +3338,7 @@ a {
 @media (max-width: 533px) {
   .hero__text {
     font-size: 16px;
+    max-width: 380px;
   }
 }
 .hero button {

@@ -7,6 +7,8 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
+
+    margin-left: auto;
   }
 
   &__opener {
@@ -20,8 +22,6 @@
   }
 
   &__closer {
-    margin-left: auto;
-
     svg {
       fill: var(--white);
     }
@@ -284,6 +284,7 @@
 
       @include m-b-mobile-lg-down {
         padding: 35px 20px;
+        padding-bottom: 60px;
       }
 
       a {
@@ -331,7 +332,6 @@
           transition: transform var(--main-transition);
         }
 
-        /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
         @include m-b-mobile-lg-down {
           font-size: 16px;
         }
