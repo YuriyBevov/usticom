@@ -1696,14 +1696,11 @@ a {
 
 .main-nav {
   display: none;
-  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
 }
-@media (min-width: 1280px) {
-  .main-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.main-nav.initialized {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main-nav__opener, .main-nav__closer {
   display: none;

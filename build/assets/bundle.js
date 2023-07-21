@@ -103,7 +103,11 @@ __webpack_require__.r(__webpack_exports__);
 var nav = document.querySelector('.main-nav');
 
 if (nav) {
+  document.addEventListener('DOMContentLoaded', function () {
+    return nav.classList.add('initialized');
+  });
   /*Установка мобильной/десктопной версии для навигации*/
+
   var setMobileNav = function setMobileNav() {
     !nav.classList.contains('main-nav--mobile') ? nav.classList.add('main-nav--mobile') : null;
   };
