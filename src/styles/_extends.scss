@@ -80,27 +80,32 @@
 .hover-opacity {
   transition: opacity var(--main-transition);
 
-  &:hover,
-  &:focus {
-    opacity: 0.7;
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
   }
 }
 
 .hover-accent-color {
   transition: all var(--main-transition);
 
-  &:hover,
-  &:focus {
-    color: var(--accent);
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      color: var(--accent);
+    }
   }
 }
 
 .hover-image-scale {
   transform: scale(1.01);
   transition: transform var(--slow-transition);
-
-  &:hover,
-  &:focus {
-    transform: scale(1.03);
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      transform: scale(1.03);
+    }
   }
 }

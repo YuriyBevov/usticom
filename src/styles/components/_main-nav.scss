@@ -1,4 +1,9 @@
 .main-nav {
+  display: none;
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+  @include m-b-up(1280px) {
+    display: flex;
+  }
   &__opener,
   &__closer {
     @extend .btn-reset;
@@ -91,7 +96,9 @@
         background-color: var(--accent);
 
         & > a {
-          opacity: .7;
+          @include m-b-tablet-up {
+            opacity: .7;
+          }
           color: var(--white);
 
           svg {
@@ -185,7 +192,9 @@
       &:hover,
       &:focus {
         a {
-          opacity: .7;
+          @include m-b-tablet-up {
+            opacity: .7;
+          }
         }
 
         svg {

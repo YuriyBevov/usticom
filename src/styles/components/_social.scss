@@ -15,10 +15,12 @@
       svg {
         transition: fill var(--main-transition);
 
-        &:hover,
-        &:focus {
-          fill: var(--accent);
-          opacity: 1;
+        @include m-b-tablet-up {
+          &:hover,
+          &:focus {
+            fill: var(--accent);
+            opacity: 1;
+          }
         }
       }
     }

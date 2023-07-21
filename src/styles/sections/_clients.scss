@@ -25,9 +25,11 @@
       filter: sepia();
       transition: filter var(--slow-transition);
 
-      &:hover,
-      &:focus {
-        filter: none;
+      @include m-b-tablet-up {
+        &:hover,
+        &:focus {
+          filter: none;
+        }
       }
 
       @include m-b-tablet-down {

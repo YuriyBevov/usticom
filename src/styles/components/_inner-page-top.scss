@@ -7,6 +7,14 @@
     max-height: 360px;
   }
 
+  @include m-b-tablet-down {
+    max-height: 300px;
+  }
+
+  @include m-b-mobile-lg-down {
+    max-height: 240px;
+  }
+
   .lw-container-fluid {
     position: relative;
     height: 100%
@@ -27,6 +35,10 @@
     }
 
     @include m-b-down(1280px) {
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+      padding-right: 30px;
+
       &::after {
         position: absolute;
         top: 0;
@@ -38,6 +50,10 @@
       }
     }
 
+    @include m-b-mobile-lg-down {
+      padding-right: 20px;
+    }
+
     h1 {
       font-family: var(--alt-font-family);
       font-size: 60px;
@@ -47,11 +63,24 @@
       position: relative;
 
       @include m-b-desktop-down {
-        font-size: 48px;
+        font-size: 52px;
       }
 
       @include m-b-down(1280px) {
+        font-size: 58px;
         color: var(--white);
+      }
+
+      @include m-b-laptop-down {
+        font-size: 48px;
+      }
+
+      @include m-b-tablet-down {
+        font-size: 42px;
+      }
+
+      @include m-b-mobile-lg-down {
+        font-size: 32px;
       }
     }
 

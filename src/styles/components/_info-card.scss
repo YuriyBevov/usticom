@@ -11,8 +11,10 @@
 
   &:hover,
   &:focus {
-    .info-card__header-date {
-      background-color: var(--accent);
+    @include m-b-tablet-up {
+      .info-card__header-date {
+        background-color: var(--accent);
+      }
     }
 
     .info-card__header img {
