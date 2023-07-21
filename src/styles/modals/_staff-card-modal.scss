@@ -1,0 +1,21 @@
+.staff-card-modal {
+  .modal__content {
+    padding: 100px;
+    width: 90vw;
+    max-width: 1240px;
+
+    @include m-b-down(1240px) {
+      padding: 40px;
+    }
+
+    @include m-b-down(960px) {
+      padding: 40px 20px;
+    }
+
+    @include m-b-tablet-down {
+      max-width: 400px;
+      padding: 0;
+      padding-bottom: 30px;
+    }
+  }
+}

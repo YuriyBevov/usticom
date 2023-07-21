@@ -1,0 +1,46 @@
+.team-tabs {
+
+  &__opener {
+    @extend .btn-reset;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    span {
+      padding-right: 10px;
+      transition: color var(--main-transition);
+    }
+
+    svg {
+      fill: var(--accent);
+      transition: fill var(--main-transition), transform var(--main-transition);
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__item {
+    margin-bottom: 40px;
+
+    &.active {
+
+      .team-tabs__opener {
+        span {
+          color: var(--accent)
+        }
+
+        svg {
+          fill: var(--accent);
+          transform: rotate(90deg);
+        }
+      }
+
+      .team-tabs__content {
+        display: block;
+        animation: fadeIn var(--main-transition);
+      }
+    }
+  }
+}

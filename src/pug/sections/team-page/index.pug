@@ -1,4 +1,5 @@
 include ../../mixins/inner-page-top
+include ../../mixins/staff-card
 
 +inner-page-top({
   title: 'Команда',
@@ -7,7 +8,7 @@ include ../../mixins/inner-page-top
 
 section.lw-section.team
   .lw-container-thin
-    ul.team__list
+    //ul.team__list
       li.team__list-item
         include ../../components/staff-card
 
@@ -16,3 +17,74 @@ section.lw-section.team
 
       li.team__list-item
         include ../../components/staff-card
+
+    .team-tabs
+      .team-tabs__item.active
+        button(type="button").team-tabs__opener
+          span.lw-section-title Юридический отдел
+          //svg(width="40" height="40")
+            use(xlink:href="./assets/sprite.svg#icon-lg-arrow")
+        .team-tabs__content
+          ul.team__list
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+      .team-tabs__item
+        button(type="button").team-tabs__opener
+          span.lw-section-title Бухгалтерский отдел
+          //svg(width="40" height="40")
+            use(xlink:href="./assets/sprite.svg#icon-lg-arrow")
+        .team-tabs__content
+          ul.team__list
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+
+            li.team__list-item
+              +staff-card({
+                type: 'short',
+                linkText: 'Подробнее',
+                cls: 'staff-card--short'
+              })
+

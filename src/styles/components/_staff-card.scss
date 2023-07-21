@@ -1,15 +1,87 @@
 .staff-card {
   display: grid;
   grid-template-columns: 360px auto;
-  grid-gap: 30px;
+  height: 100%;
+
+  @include m-b-laptop-down {
+    grid-template-columns: 250px auto;
+  }
+
+  @include m-b-tablet-down {
+    grid-template-columns: 1fr;
+  }
+
+  &--short {
+    grid-template-columns: 2fr 3fr;
+
+    .staff-card__title {
+      margin-bottom: 30px;
+
+      @include m-b-laptop-down {
+        margin-bottom: 20px;
+      }
+
+      @include m-b-down(400px) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .staff-card__content {
+      padding: 30px;
+
+      @include m-b-down(1240px) {
+        padding: 20px;
+      }
+
+      @include m-b-laptop-down {
+        padding: 15px;
+      }
+
+      @include m-b-tablet-down {
+        padding: 30px;
+      }
+
+      @include m-b-mobile-lg-down {
+        padding: 20px 15px;
+      }
+    }
+
+    .staff-card__btn {
+      max-width: 225px;
+
+      @include m-b-down(400px) {
+        max-width: 100%;
+      }
+    }
+
+    img {
+      height: 100% !important;
+      @include m-b-tablet-down {
+        width: 100%;
+      }
+    }
+
+    @include m-b-laptop-down {
+      grid-template-columns: 4fr 5fr;
+    }
+
+    @include m-b-down(400px) {
+      grid-template-columns: 1fr;
+    }
+  }
 
   img {
-    height: 100%;
+    width: 100%;
+    height: auto;
   }
 
   &__content {
     @extend .flex-column;
-    padding: 10px 0;
+    padding: 10px 30px 20px;
+
+    @include m-b-down(960px) {
+      padding: 10px 20px;
+    }
   }
 
   &__title {
@@ -17,6 +89,19 @@
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include m-b-down(1240px) {
+      font-size: 22px;
+    }
+
+    @include m-b-laptop-down {
+      font-size: 20px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
   }
 
   &__desc {
@@ -24,6 +109,22 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 40px;
+
+    @include m-b-down(1240px) {
+      font-size: 22px;
+    }
+
+    @include m-b-laptop-down {
+      font-size: 20px;
+    }
+
+    @include m-b-tablet-down {
+      margin-bottom: 15px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 
   &__list-title {
@@ -31,20 +132,47 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
+
+    @include m-b-tablet-down {
+      font-size: 16px;
+    }
   }
 
   &__list {
     margin-bottom: 30px;
     list-style: disc;
+
+    @include m-b-tablet-down {
+      padding-left: 30px;
+    }
   }
 
   &__list-item {
     font-size: 18px;
     font-weight: 500;
+
+    @include m-b-tablet-down {
+      font-size: 16px;
+    }
+
+    @include m-b-down(400px) {
+      font-size: 14px;
+    }
   }
 
-  &__link {
+  &__btn {
+    font-size: 16px;
     margin-top: auto;
-    margin-bottom: 20px;
+    min-height: 52px;
+    max-width: 350px;
+
+    @include m-b-laptop-down {
+      min-height: 44px;
+    }
+
+    @include m-b-tablet-down {
+      max-width: 100%;
+      font-size: 14px;
+    }
   }
 }

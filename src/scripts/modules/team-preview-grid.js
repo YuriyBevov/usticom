@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll('.staff-preview-card');
 
-if(cards) {
+if(cards.length) {
+  console.log(cards);
   const showMoreBtn = document.querySelector('.team-preview-grid__btn');
   const windowWidth = window.innerWidth;
   const CARDS_TO_SHOW = 3;

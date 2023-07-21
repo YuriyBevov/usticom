@@ -1,9 +1,25 @@
 .team {
   &__list {
     @extend .list-reset;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+
+    @include m-b-down(1240px) {
+      grid-gap: 20px;
+    }
+
+    @include m-b-laptop-down {
+      grid-gap: 15px;
+    }
+
+    @include m-b-tablet-down {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__list-item {
-    margin-bottom: 30px;
+    //outline: 1px solid red;
   }
 }

@@ -1,6 +1,239 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/classes/Modal.js":
+/*!**************************************!*\
+  !*** ./src/scripts/classes/Modal.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Modal": () => (/* binding */ Modal)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var Modal = /*#__PURE__*/function () {
+  function Modal(modal) {
+    var _this = this;
+
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    _classCallCheck(this, Modal);
+
+    _defineProperty(this, "bodyLocker", function (bool) {
+      var body = document.querySelector('body');
+
+      if (bool) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = 'auto';
+      }
+    });
+
+    _defineProperty(this, "focusTrap", function () {
+      var firstFocusableElement = _this.modal.querySelectorAll(_this.focusableElements)[0];
+
+      var focusableContent = _this.modal.querySelectorAll(_this.focusableElements);
+
+      var lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+      if (focusableContent.length) {
+        var onBtnClickHandler = function onBtnClickHandler(evt) {
+          var isTabPressed = evt.key === 'Tab' || evt.key === 9;
+
+          if (evt.key === 'Escape') {
+            document.removeEventListener('keydown', onBtnClickHandler);
+          }
+
+          if (!isTabPressed) {
+            return;
+          }
+
+          if (evt.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              evt.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              evt.preventDefault();
+            }
+          }
+        };
+
+        document.addEventListener('keydown', onBtnClickHandler);
+        firstFocusableElement.focus();
+      }
+    });
+
+    _defineProperty(this, "addListeners", function () {
+      if (_this.openers) {
+        _this.openers.forEach(function (opener) {
+          opener.removeEventListener('click', _this.openModal);
+        });
+      }
+
+      document.addEventListener('click', _this.closeByOverlayClick);
+      document.addEventListener('keydown', _this.closeByEscBtn);
+
+      if (_this.close) {
+        _this.close.addEventListener('click', _this.closeByBtnClick);
+      }
+    });
+
+    _defineProperty(this, "refresh", function () {
+      document.removeEventListener('click', _this.closeByOverlayClick);
+      document.removeEventListener('keydown', _this.closeByEscBtn);
+
+      if (_this.close) {
+        _this.close.removeEventListener('click', _this.closeByBtnClick);
+      }
+
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(_this.modal, {
+        display: 'flex'
+      }, {
+        opacity: 0,
+        duration: .6,
+        ease: 'ease-in',
+        onComplete: function onComplete() {
+          _this.modal.style.display = 'none'; //если в модалке есть форма, при закрытии обнуляю поля
+
+          _this.modal.querySelectorAll('form').forEach(function (f) {
+            return f.reset();
+          });
+        }
+      });
+      !_this.preventBodyLock ? _this.bodyLocker(false) : null;
+      _this.preventBodyLock = false;
+
+      if (_this.openers) {
+        _this.openers.forEach(function (opener) {
+          opener.addEventListener('click', _this.openModal);
+        });
+      }
+    });
+
+    _defineProperty(this, "closeByOverlayClick", function (evt) {
+      if (evt.target === _this.overlay) {
+        _this.refresh();
+      }
+    });
+
+    _defineProperty(this, "closeByEscBtn", function (evt) {
+      if (evt.key === "Escape") {
+        _this.refresh();
+      }
+    });
+
+    _defineProperty(this, "closeByBtnClick", function () {
+      _this.refresh();
+    });
+
+    _defineProperty(this, "openModal", function (evt) {
+      var title = _this.modal.querySelector('.lw-section-title');
+
+      var desc = _this.modal.querySelector('.modal__header-text');
+
+      var formName = _this.modal.querySelector('input[type="hidden"]');
+
+      if (title) {
+        if (evt.currentTarget.dataset.modalTitle) {
+          title.innerHTML = evt.currentTarget.dataset.modalTitle;
+          formName.value = title.innerText;
+        } else {
+          title.innerHTML = 'Связаться с менеджером';
+        }
+      }
+
+      if (desc) {
+        if (evt.currentTarget.dataset.modalText) {
+          desc.innerHTML = evt.currentTarget.dataset.modalText;
+        } else {
+          desc.innerHTML = 'Заполните форму, и мы перезвоним Вам';
+        }
+      }
+
+      evt.preventDefault();
+
+      _this.bodyLocker(true);
+
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(_this.modal, {
+        display: 'none',
+        opacity: 0
+      }, {
+        display: 'flex',
+        opacity: 1,
+        duration: .6,
+        ease: 'ease-in',
+        onComplete: function onComplete() {
+          _this.addListeners();
+
+          _this.focusTrap();
+        }
+      });
+    });
+
+    _defineProperty(this, "show", function () {
+      _this.isBodyLocked ? _this.bodyLocker(true) : null;
+      gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(_this.modal, {
+        display: 'none',
+        opacity: 0
+      }, {
+        display: 'flex',
+        opacity: 1,
+        duration: .6,
+        ease: 'ease-in',
+        onComplete: function onComplete() {
+          _this.addListeners();
+
+          _this.focusTrap();
+        }
+      });
+    });
+
+    this.preventBodyLock = options.preventBodyLock ? true : false, this.modal = modal;
+    this.overlay = this.modal.querySelector('.modal__overlay');
+    this.content = this.modal.querySelector('.modal__content');
+    this.close = this.modal.querySelector('.modal-closer');
+    this.id = this.modal.getAttribute('id');
+    this.openers = document.querySelectorAll('[data-modal-anchor="' + this.id + '"]');
+    this.isInited = false;
+    this.focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
+    this.init();
+  }
+
+  _createClass(Modal, [{
+    key: "init",
+    value: function init() {
+      var _this2 = this;
+
+      if (this.openers) {
+        this.isInited = true;
+        this.openers.forEach(function (opener) {
+          opener.addEventListener('click', _this2.openModal);
+        });
+      } else {
+        console.error('Не добавлена кнопка открытия модального окна, либо в ней не прописан аттр-т: data-modal-anchor={modal-id} ');
+      }
+    }
+  }]);
+
+  return Modal;
+}();
+
+/***/ }),
+
 /***/ "./src/scripts/modules/content-menu.js":
 /*!*********************************************!*\
   !*** ./src/scripts/modules/content-menu.js ***!
@@ -92,6 +325,26 @@ if (phoneFields) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/modal.js":
+/*!**************************************!*\
+  !*** ./src/scripts/modules/modal.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _classes_Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../classes/Modal */ "./src/scripts/classes/Modal.js");
+
+var modals = document.querySelectorAll('.modal');
+
+if (modals) {
+  modals.forEach(function (modal) {
+    new _classes_Modal__WEBPACK_IMPORTED_MODULE_0__.Modal(modal);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/nav.js":
 /*!************************************!*\
   !*** ./src/scripts/modules/nav.js ***!
@@ -121,8 +374,12 @@ if (nav) {
   var checkWidth = function checkWidth() {
     if (window.innerWidth < 1281) {
       setMobileNav();
+      /*if(nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        bodyLocker(true); // баг с модалками
+      };*/
     } else {
-      setDesktopNav();
+      setDesktopNav(); //bodyLocker(false);
     }
   };
 
@@ -251,7 +508,8 @@ if (featureCardSlider) {
 
 var cards = document.querySelectorAll('.staff-preview-card');
 
-if (cards) {
+if (cards.length) {
+  console.log(cards);
   var showMoreBtn = document.querySelector('.team-preview-grid__btn');
   var windowWidth = window.innerWidth;
   var CARDS_TO_SHOW = 3;
@@ -293,6 +551,31 @@ if (cards) {
       showItems();
       flag = true;
     }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/team-tabs.js":
+/*!******************************************!*\
+  !*** ./src/scripts/modules/team-tabs.js ***!
+  \******************************************/
+/***/ (() => {
+
+var tabs = document.querySelector('.team-tabs');
+
+if (tabs) {
+  var openers = tabs.querySelectorAll('.team-tabs__opener');
+
+  var onClickHandler = function onClickHandler(evt) {
+    var target = evt.currentTarget; //if(target.parentNode.classList.contains('active')) return;
+    //document.querySelector('.team-tabs__item.active').classList.remove('active');
+
+    target.parentNode.classList.toggle('active');
+  };
+
+  openers.forEach(function (btn) {
+    btn.addEventListener('click', onClickHandler);
   });
 }
 
@@ -26964,6 +27247,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_content_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/content-menu */ "./src/scripts/modules/content-menu.js");
 /* harmony import */ var _modules_team_preview_grid__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/team-preview-grid */ "./src/scripts/modules/team-preview-grid.js");
 /* harmony import */ var _modules_team_preview_grid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_team_preview_grid__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_team_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/team-tabs */ "./src/scripts/modules/team-tabs.js");
+/* harmony import */ var _modules_team_tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_team_tabs__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/modal */ "./src/scripts/modules/modal.js");
+
+
 
 
 

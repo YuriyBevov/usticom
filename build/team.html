@@ -161,41 +161,95 @@
             </section>
       <section class="lw-section team">
         <div class="lw-container-thin">
-          <ul class="team__list">
-            <li class="team__list-item">
-              <div class="staff-card"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника Алексеевна" width="360" height="420">
-                <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника Алексеевна</span><span class="staff-card__desc">Ведущий юрист</span><span class="staff-card__list-title">Специализация</span>
-                  <ul class="staff-card__list">
-                    <li class="staff-card__list-item">комплексное сопровождение судебных споров, включая споры в сфере банкротства физических и юридических лиц;</li>
-                    <li class="staff-card__list-item">составление договоров;</li>
-                    <li class="staff-card__list-item">анализ правовых рисков в юридических документах, подготовленных в рамках российского и международного права</li>
-                  </ul><a class="lw-main-btn lw-main-btn--accent staff-card__link" href="tel:+70000000">Связаться со специалистом</a>
-                </div>
+          <!--ul.team__list
+          li.team__list-item
+            include ../../components/staff-card
+          
+          li.team__list-item
+            include ../../components/staff-card
+          
+          li.team__list-item
+            include ../../components/staff-card
+          
+          -->
+          <div class="team-tabs">
+            <div class="team-tabs__item active">
+              <button class="team-tabs__opener" type="button"><span class="lw-section-title">Юридический отдел</span>
+                <!--svg(width="40" height="40")use(xlink:href="./assets/sprite.svg#icon-lg-arrow")
+                -->
+              </button>
+              <div class="team-tabs__content">
+                <ul class="team__list">
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="team__list-item">
-              <div class="staff-card"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника Алексеевна" width="360" height="420">
-                <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника Алексеевна</span><span class="staff-card__desc">Ведущий юрист</span><span class="staff-card__list-title">Специализация</span>
-                  <ul class="staff-card__list">
-                    <li class="staff-card__list-item">комплексное сопровождение судебных споров, включая споры в сфере банкротства физических и юридических лиц;</li>
-                    <li class="staff-card__list-item">составление договоров;</li>
-                    <li class="staff-card__list-item">анализ правовых рисков в юридических документах, подготовленных в рамках российского и международного права</li>
-                  </ul><a class="lw-main-btn lw-main-btn--accent staff-card__link" href="tel:+70000000">Связаться со специалистом</a>
-                </div>
+            </div>
+            <div class="team-tabs__item">
+              <button class="team-tabs__opener" type="button"><span class="lw-section-title">Бухгалтерский отдел</span>
+                <!--svg(width="40" height="40")use(xlink:href="./assets/sprite.svg#icon-lg-arrow")
+                -->
+              </button>
+              <div class="team-tabs__content">
+                <ul class="team__list">
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                  <li class="team__list-item">
+                          <div class="staff-card staff-card--short"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+                            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span>
+                              <button class="lw-main-btn lw-main-btn--accent staff-card__btn" type="button" data-modal-anchor="staff-card">Подробнее</button>
+                            </div>
+                          </div>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li class="team__list-item">
-              <div class="staff-card"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника Алексеевна" width="360" height="420">
-                <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника Алексеевна</span><span class="staff-card__desc">Ведущий юрист</span><span class="staff-card__list-title">Специализация</span>
-                  <ul class="staff-card__list">
-                    <li class="staff-card__list-item">комплексное сопровождение судебных споров, включая споры в сфере банкротства физических и юридических лиц;</li>
-                    <li class="staff-card__list-item">составление договоров;</li>
-                    <li class="staff-card__list-item">анализ правовых рисков в юридических документах, подготовленных в рамках российского и международного права</li>
-                  </ul><a class="lw-main-btn lw-main-btn--accent staff-card__link" href="tel:+70000000">Связаться со специалистом</a>
-                </div>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
       <section class="callback">
@@ -292,8 +346,27 @@
           </div>
         </div>
       </div>
-    </footer>
-    <!--include ./modals/...-->
+    </footer><div class="modal staff-card-modal" id="staff-card">
+<div class="modal__overlay">
+<div class="modal__content">
+<button class="modal-closer">
+<svg width="24" height="24">
+<use xlink:href="./assets/sprite.svg#icon-close"></use>
+</svg>
+</button>
+<div class="modal__content-body">
+          <div class="staff-card"><img src="./assets/img/staff-img.jpg" alt="Литвиненко Вероника" width="250" height="285">
+            <div class="staff-card__content"><span class="staff-card__title">Литвиненко Вероника</span><span class="staff-card__desc">Ведущий юрист</span><span class="staff-card__list-title">Специализация</span>
+              <ul class="staff-card__list">
+                <li class="staff-card__list-item">комплексное сопровождение судебных споров, включая споры в сфере банкротства физических и юридических лиц;</li>
+                <li class="staff-card__list-item">составление договоров;</li>
+                <li class="staff-card__list-item">анализ правовых рисков в юридических документах, подготовленных в рамках российского и международного права</li>
+              </ul><a class="lw-main-btn lw-main-btn--accent staff-card__btn" href="tel:+70000000">Связаться со специалистом</a>
+            </div>
+          </div></div>
+</div>
+</div>
+</div>
     <!--script(src="./js/bundle.js")-->
   </body>
 </html>

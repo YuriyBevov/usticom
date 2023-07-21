@@ -19,8 +19,14 @@ if(nav) {
   const checkWidth = () => {
     if(window.innerWidth < 1281) {
       setMobileNav();
+
+      /*if(nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        bodyLocker(true); // баг с модалками
+      };*/
     } else {
       setDesktopNav();
+      //bodyLocker(false);
     }
   }
 

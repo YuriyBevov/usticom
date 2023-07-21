@@ -34,6 +34,7 @@
 @import "./components/icons-grid";
 @import "./components/feature-card";
 @import "./components/feature-card-slider";
+@import "./components/team-tabs";
 
 /*Шаблоны страниц*/
 @import "./views/info-block";
@@ -54,5 +55,8 @@
 @import "./layout/main-footer";
 
 /* Модальные окна */
+
+@import "./modals/modal";
+@import "./modals/staff-card-modal";
 
 
