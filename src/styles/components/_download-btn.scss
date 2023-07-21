@@ -4,6 +4,10 @@
   padding: 15px;
   background-color: var(--light);
 
+  @include m-b-mobile-lg-down {
+    padding: 15px;
+  }
+
   span {
     display: inline-block;
     font-size: 16px;
@@ -11,6 +15,10 @@
     width: calc(100% - 40px);
     margin-right: 16px;
     color: var(--accent);
+
+    @include m-b-mobile-lg-down {
+      font-size: 14px;
+    }
   }
 
   svg {

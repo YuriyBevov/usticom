@@ -1,0 +1,36 @@
+.breadcrumbs {
+  margin: 40px 0;
+
+  @include m-b-down(960px) {
+    display: none;
+  }
+
+  a,
+  span {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  a {
+    position: relative;
+    padding-right: 48px;
+    color: var(--gray-2);
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 1px;
+      content: '';
+      background-color: var(--gray-2);
+    }
+  }
+
+  span {
+    font-weight: 600;
+    color: var(--accent);
+  }
+}

@@ -120,25 +120,37 @@
   }
 
   .button-block {
+    @extend .flex-wrap;
 
-    //@extend .flex-wrap;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
     padding: 0 40px;
     width: 100%;
-    //justify-content: space-around;
+    justify-content: space-between;
     margin: 40px auto 20px;
     max-width: 850px;
-    display: none;
+
+    @include m-b-down(960px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include m-b-mobile-lg-down {
+      padding: 0;
+    }
+
     & > * {
       width: 100%;
-      //min-width: 360px;
-      //max-width: 360px;
-      max-width: 100%;
-      height: 60px;
-      //margin: 0 10px;
+      max-width: 360px;
+      min-height: 60px;
+      margin: 0 auto;
       margin-bottom: 20px;
+
+      @include m-b-tablet-down {
+        min-height: 54px;
+      }
+
+      @include m-b-mobile-lg-down {
+        min-height: 48px;
+      }
     }
 
     button {
@@ -147,6 +159,10 @@
       letter-spacing: 0.2px;
       background-color: var(--accent);
       color: var(--white);
+
+      @include m-b-mobile-lg-down {
+        font-size: 14px
+      }
     }
   }
 
@@ -243,8 +259,8 @@
   border: 1px solid #F0F0F0;
   margin-bottom: 40px;
 
-  @include m-b-down(1280px) { // TEMP!!
-    display: none;
+  @include m-b-down(960px) {
+    display: none; // TEMP
   }
 
   &__section {

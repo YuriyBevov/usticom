@@ -1,11 +1,14 @@
 include ../../mixins/inner-page-top
 include ../../mixins/left-menu
 include ../../mixins/download-btn
+include ../../mixins/main-slider
 
 +inner-page-top({
   title: 'Аудиторские услуги',
   img: 'page-header-bg.jpg'
 })
+
+include ../../components/breadcrumbs
 
 //.info-block--wide - Если не нужен сайдбар
 .lw-container-thin.info-block
@@ -203,21 +206,40 @@ include ../../mixins/download-btn
     section.lw-section
       h2.lw-accent-title Преимущества
 
-      p жду адаптив
+      include ../../components/features
 
-    section.lw-section
+    section.lw-section.clients
       h2.lw-accent-title Клиенты
 
-      p жду адаптив
+      +main-slider({
+        isPaginationEnabled:  true,
+        isNavigationEnabled:  false,
+        isAutoplayEnabled: true,
+        slides: clientsSlider,
+        cls: 'clients-slider'
+      })
 
-    section.lw-section
+    section.lw-section.licenses
       h2.lw-accent-title Сертификаты и гарантии
 
-      p жду адаптив
+      +main-slider({
+        isPaginationEnabled:  true,
+        isNavigationEnabled:  false,
+        isAutoSlidesEnabled: true,
+        slides: licensesSlider,
+
+        cls: 'licenses-slider licenses-slider--thin'
+      })
 
     section.more
       span.more__title Вам также могут быть интересны:
 
-      p жду адаптив
+      ul.more__list
+        li.more__list-item
+          a(href="") Налоговый мониторинг
+        li.more__list-item
+          a(href="") Адвокат по налоговым спорам
+        li.more__list-item
+          a(href="") Налоговая экспертиза
 
 

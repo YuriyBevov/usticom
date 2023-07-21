@@ -47,7 +47,11 @@ if(licensesSlider) {
       },
 
       1025: {
-        slidesPerView: 4
+        slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 3 : 4
+      },
+
+      1280: {
+        slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 2 : 4
       }
     }
   });

@@ -1,17 +1,15 @@
 .info-block {
   position: relative;
-  display: grid;
-  grid-template-columns: 360px auto;
-  grid-gap: 30px;
+  display: flex;
   margin-bottom: 60px;
 
   &--wide {
     display: flex;
     flex-direction: column;
-  }
 
-  @include m-b-down(1280px) {
-    grid-template-columns: 1fr;
+    .info-block__content {
+      width: 100%;
+    }
   }
 
   &__sidebar {
@@ -22,14 +20,21 @@
     background-color: #f8f8f8;
     border: 1px solid var(--accent);
 
+    width: 360px;
+
     &-title {
       display: inline-block;
       font-family: var(--alt-font-family);
-      font-size: 25px;
+      font-size: 24px;
       font-weight: 700;
       text-transform: uppercase;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       color: var(--accent);
+
+      @include m-b-desktop-down {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
     }
 
     @include m-b-down(1280px) {
@@ -40,6 +45,76 @@
   &__content {
     section:last-child {
       margin-bottom: 0;
+    }
+
+    width: calc(100% - 390px);
+    margin-left: auto;
+
+    @include m-b-down(1280px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  & .features-list {
+    position: relative;
+
+    @include m-b-up(1419px) {
+      grid-template-columns: 1fr;
+      padding: 35px 30px;
+
+      &__item {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 20px;
+
+
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgba(35,31,32, .1);
+        }
+
+        &-content {
+          padding: 0;
+          border-right: none !important;
+        }
+      }
+    }
+
+    @include m-b-down(1420px) {
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 30px;
+        height: 100%;
+        background-color: var(--light);
+
+        @include m-b-mobile-lg-down {
+          width: 20px;
+        }
+      }
+
+      &::before {
+        left: -30px;
+
+        @include m-b-mobile-lg-down {
+          left: -20px;
+        }
+      }
+
+      &::after {
+        right: -30px;
+
+        @include m-b-mobile-lg-down {
+          right: -20px;
+        }
+      }
+
+      /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+
     }
   }
 }

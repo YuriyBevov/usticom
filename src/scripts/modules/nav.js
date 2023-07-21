@@ -4,6 +4,7 @@ const nav = document.querySelector('.main-nav');
 
 if(nav) {
   document.addEventListener('DOMContentLoaded', () => nav.classList.add('initialized'));
+
   /*Установка мобильной/десктопной версии для навигации*/
   const setMobileNav = () => {
     !nav.classList.contains('main-nav--mobile') ?
