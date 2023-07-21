@@ -82,6 +82,10 @@
     @include m-b-down(960px) {
       padding: 10px 20px;
     }
+
+    @include m-b-down(375px) {
+      padding: 10px 15px;
+    }
   }
 
   &__title {
@@ -145,11 +149,17 @@
     @include m-b-tablet-down {
       padding-left: 30px;
     }
+
+    @include m-b-mobile-lg-down {
+      margin-top: 0;
+      padding-left: 25px;
+    }
   }
 
   &__list-item {
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 5px;
 
     @include m-b-tablet-down {
       font-size: 16px;

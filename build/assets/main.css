@@ -3058,6 +3058,11 @@ a {
     padding: 10px 20px;
   }
 }
+@media (max-width: 375px) {
+  .staff-card__content {
+    padding: 10px 15px;
+  }
+}
 .staff-card__title {
   display: inline-block;
   font-size: 24px;
@@ -3126,9 +3131,16 @@ a {
     padding-left: 30px;
   }
 }
+@media (max-width: 533px) {
+  .staff-card__list {
+    margin-top: 0;
+    padding-left: 25px;
+  }
+}
 .staff-card__list-item {
   font-size: 18px;
   font-weight: 500;
+  margin-bottom: 5px;
 }
 @media (max-width: 767px) {
   .staff-card__list-item {
