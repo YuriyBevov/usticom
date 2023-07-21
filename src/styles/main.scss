@@ -9,7 +9,7 @@
 
 /*шаблон*/
 @import "./layout/main-header";
-@import "./layout/main-footer";
+
 
 /* Компоненты */
 @import "./components/main-logo";
@@ -49,6 +49,8 @@
 @import "./sections/more";
 @import "./sections/team";
 @import "./sections/news-section";
+
+@import "./layout/main-footer";
 
 /* Модальные окна */
 
