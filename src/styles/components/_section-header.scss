@@ -4,6 +4,10 @@
   justify-content: space-between;
   margin-bottom: 32px;
 
+  .lw-accent-title {
+    margin-bottom: 0;
+  }
+
   @include m-b-desktop-down {
     margin-bottom: 24px;
   }

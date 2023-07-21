@@ -12,14 +12,26 @@
         transform: scale(1.03);
       }
     }
+
+    @include m-b-mobile-lg-down {
+      grid-template-columns: 1fr;
+      grid-gap: 16px;
+    }
   }
 
   &__image-wrapper {
     overflow: hidden;
     img {
-      height: 100%;
+      display: block;
+      height: auto;
       transform: scale(1.01);
       transition: transform var(--slow-transition);
+
+      @include m-b-mobile-lg-down {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+      }
     }
   }
 
@@ -44,6 +56,10 @@
     color: var(--primary);
 
     @include text-truncate(2);
+
+    @include m-b-tablet-down {
+      font-size: 16px;
+    }
   }
 
   &__desc {
@@ -53,5 +69,13 @@
     color: var(--text);
 
     @include text-truncate(3);
+
+    @include m-b-tablet-down {
+      font-size: 16px;
+    }
+
+    @include m-b-mobile-lg-down {
+      @include text-truncate(5);
+    }
   }
 }

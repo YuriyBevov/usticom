@@ -8,8 +8,13 @@
     max-height: 360px;
   }
 
+  @include m-b-down(960px) {
+    margin-bottom: 30px;
+  }
+
   @include m-b-tablet-down {
     max-height: 300px;
+    margin-bottom: 20px;
   }
 
   @include m-b-mobile-lg-down {

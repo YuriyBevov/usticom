@@ -67,27 +67,13 @@
     }
 
     @include m-b-mobile-lg-down {
-      font-size: 18px;
+      font-size: 22px;
     }
   }
 
   &-accent-title {
     display: inline-block;
-    font-family: var(--alt-font-family);
-    font-size: 36px;
-    font-weight: 700;
-    margin: 15px 0;
-    margin-bottom: 40px;
-    text-transform: uppercase;
     color: var(--accent);
-
-    @include m-b-down(1280px) {
-      font-size: 32px;
-    }
-
-    @include m-b-laptop-down {
-      font-size: 28px;
-    }
   }
 
   &-subtitle {
