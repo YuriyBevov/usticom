@@ -2,10 +2,28 @@
   position: relative;
   overflow: hidden;
 
+  @include m-b-down(500px) {
+    display: flex;
+  }
+
   img {
     display: block;
     height: 100%;
+    width: 100%;
     @extend .hover-image-scale;
+
+    @include m-b-down(500px) {
+      max-width: 50%;
+      object-fit: contain;
+    }
+
+    @include m-b-down(420px) {
+      max-width: 40%;
+    }
+
+    @include m-b-down(375px) {
+      max-width: 100%;
+    }
   }
 
   &__content {
@@ -20,6 +38,20 @@
     width: calc(100% - 30px);
     min-height: 85px;
     background-color: var(--white);
+
+    @include m-b-down(960px) {
+      left: 10px;
+      bottom: 10px;
+      width: calc(100% - 20px);
+    }
+
+    @include m-b-down(500px) {
+      position: static;
+    }
+
+    @include m-b-down(375px) {
+      position: absolute;
+    }
   }
 
   &__title {
@@ -30,6 +62,14 @@
     margin-bottom: 6px;
 
     color: var(--brown);
+
+    @include m-b-down(960px) {
+      font-size: 16px;
+    }
+
+    @include m-b-down(500px) {
+      font-size: 14px;
+    }
   }
 
   &__desc {

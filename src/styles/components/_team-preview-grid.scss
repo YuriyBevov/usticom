@@ -2,4 +2,30 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+
+  @include m-b-down(960px) {
+    grid-gap: 15px;
+  }
+
+  @include m-b-tablet-down {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m-b-down(500px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__btn {
+    display: none;
+
+    max-width: 250px;
+    min-height: 48px;
+    margin: 30px auto;
+    margin-bottom: 0;
+    background-color: var(--accent);
+
+    @include m-b-mobile-lg-down {
+      display: flex;
+    }
+  }
 }
