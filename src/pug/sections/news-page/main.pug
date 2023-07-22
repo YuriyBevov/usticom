@@ -1,0 +1,24 @@
+include ../../content/index-page
+include ../../mixins/info-card
+include ../../mixins/inner-page-top
+
++inner-page-top({
+  title: 'Новости',
+  img: 'page-header-bg.jpg'
+})
+
+include ../../components/breadcrumbs
+
+section.lw-section.news-section
+  .lw-container-thin
+    ul.news-list
+      each item in newsList
+        li.news-list__item
+          +info-card(item)
+        li.news-list__item
+          +info-card(item)
+        li.news-list__item
+          +info-card(item)
+
+    include ../../components/pagination
+

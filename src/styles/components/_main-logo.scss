@@ -2,6 +2,10 @@
   @extend .flex-centered-content;
   @extend .hover-opacity;
 
+  img {
+    object-fit: contain;
+  }
+
   @include m-b-mobile-lg-down {
     width: 130px;
   }

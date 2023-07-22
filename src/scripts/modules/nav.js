@@ -12,6 +12,13 @@ if(nav) {
   }
 
   const setDesktopNav = () => {
+
+    /*Обновляю мобильное меню в момент перестроения на ПК*/
+    if(nav.classList.contains('active')) {
+      closeNavHandler();
+    };
+    /*Обновляю мобильное меню в момент перестроения на ПК*/
+
     nav.classList.contains('main-nav--mobile') ?
     nav.classList.remove('main-nav--mobile') : null;
   }
@@ -19,14 +26,8 @@ if(nav) {
   const checkWidth = () => {
     if(window.innerWidth < 1281) {
       setMobileNav();
-
-      /*if(nav.classList.contains('active')) {
-        nav.classList.remove('active');
-        bodyLocker(true); // баг с модалками
-      };*/
     } else {
       setDesktopNav();
-      //bodyLocker(false);
     }
   }
 
@@ -34,49 +35,50 @@ if(nav) {
   window.addEventListener('resize', checkWidth);
   /*Установка мобильной/десктопной версии для навигации*/
 
+  /*Открытие/закрытие мобильного меню*/
   const opener = document.querySelector('.main-nav__opener');
   const closer = document.querySelector('.main-nav__closer');
 
-  if(opener) {
-    const onClickOpenNav = () => {
-      bodyLocker(true);
+  const openNavHandler = () => {
+    bodyLocker(true);
 
-      nav.classList.add('active');
+    nav.classList.add('active');
 
-      opener.removeEventListener('click', onClickOpenNav);
-      closer.addEventListener('click', onClickCloseNav);
-    }
-
-    const onClickCloseNav = () => {
-      bodyLocker(false);
-
-      nav.classList.remove('active');
-
-      /*Сворачиваю все открытые пункты меню*/
-      document.querySelectorAll('.main-nav--mobile .active').forEach(item => {
-        item.classList.remove('active');
-      });
-      /*Сворачиваю все открытые пункты меню*/
-
-      closer.removeEventListener('click', onClickCloseNav);
-      opener.addEventListener('click', onClickOpenNav);
-    }
-
-    opener.addEventListener('click', onClickOpenNav);
+    opener.removeEventListener('click', openNavHandler);
+    closer.addEventListener('click', closeNavHandler);
   }
 
-  const parents = document.querySelectorAll('li.has-inner > a');
+  const closeNavHandler = () => {
+    bodyLocker(false);
 
-  console.log(parents);
+    nav.classList.remove('active');
 
-  if(parents) {
-    parents.forEach(item => {
+    /*Сворачиваю все открытые пункты меню*/
+    document.querySelectorAll('.main-nav--mobile .active').forEach(item => {
+      item.classList.remove('active');
+    });
+    /*Сворачиваю все открытые пункты меню*/
+
+    closer.removeEventListener('click', closeNavHandler);
+    opener.addEventListener('click', openNavHandler);
+  }
+
+  if(opener) {
+    opener.addEventListener('click', openNavHandler);
+  }
+
+  const links = document.querySelectorAll('li.has-inner > a');
+
+  if(links) {
+    links.forEach(item => {
       item.addEventListener('click', (evt) => {
-        evt.preventDefault();
+        if(!nav.classList.contains('main-nav--mobile')) return;
 
+        evt.preventDefault();
         item.parentNode.classList.toggle('active');
         item.parentNode.querySelector('.main-nav__inner-list').classList.toggle('active');
       });
     })
   }
+   /*Открытие/закрытие мобильного меню*/
 }

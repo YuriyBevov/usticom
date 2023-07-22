@@ -5,6 +5,13 @@
   background-color: var(--white);
   box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.14);
 
+  .main-logo {
+    img {
+      width: auto;
+      max-height: 40px;
+    }
+  }
+
   @include m-b-down(1280px) {
     top: 0;
   }
@@ -26,7 +33,14 @@
 
       .social {
         margin-left: auto;
+
+        &__list {
+          gap: 8px;
+        }
+
         svg {
+          width: auto;
+          height: 24px;
           fill: var(--text);
         }
       }
@@ -54,7 +68,7 @@
       }
 
       @include m-b-down(1280px) {
-        padding: 25px 0;
+        padding: 15px 0;
       }
     }
   }

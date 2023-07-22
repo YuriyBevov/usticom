@@ -17,6 +17,8 @@
     padding-right: 48px;
     color: var(--gray-2);
 
+    @extend .hover-opacity;
+
     &::after {
       position: absolute;
       top: 50%;
