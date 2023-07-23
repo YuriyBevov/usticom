@@ -4189,11 +4189,9 @@ a {
   transition: filter var(--slow-transition);
   transition: filter var(--slow-transition), -webkit-filter var(--slow-transition);
 }
-@media (min-width: 768px) {
-  .clients .swiper-slide img:hover, .clients .swiper-slide img:focus {
-    -webkit-filter: none;
-    filter: none;
-  }
+.clients .swiper-slide img:hover, .clients .swiper-slide img:focus {
+  -webkit-filter: none;
+  filter: none;
 }
 @media (max-width: 767px) {
   .clients .swiper-slide img {
