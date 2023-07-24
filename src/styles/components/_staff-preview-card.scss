@@ -1,7 +1,6 @@
 .staff-preview-card {
   position: relative;
   overflow: hidden;
-  max-height: 350px;
 
   @include m-b-down(500px) {
     display: flex;

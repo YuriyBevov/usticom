@@ -3385,7 +3385,6 @@ a {
 .staff-preview-card {
   position: relative;
   overflow: hidden;
-  max-height: 350px;
 }
 @media (max-width: 500px) {
   .staff-preview-card {
