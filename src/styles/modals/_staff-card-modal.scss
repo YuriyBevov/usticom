@@ -17,5 +17,13 @@
       padding: 0;
       padding-bottom: 30px;
     }
+
+    @include m-b-tablet-up {
+      &:hover img,
+      &:focus img{
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+    }
   }
 }

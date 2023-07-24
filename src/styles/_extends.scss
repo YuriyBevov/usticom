@@ -109,3 +109,33 @@
     }
   }
 }
+
+.hover-image-grayscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: filter var(--slow-transition);
+
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+}
+
+.hover-image-grayscale-with-zoom {
+  transform: scale(1.01);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: filter var(--slow-transition), transform var(--slow-transition);
+
+  @include m-b-tablet-up {
+    &:hover,
+    &:focus {
+      transform: scale(1.03);
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .staff-preview-card {
   position: relative;
   overflow: hidden;
+  max-height: 350px;
 
   @include m-b-down(500px) {
     display: flex;
@@ -10,7 +11,8 @@
     display: block;
     height: 100%;
     width: 100%;
-    @extend .hover-image-scale;
+
+    @extend .hover-image-grayscale-with-zoom;
 
     @include m-b-down(500px) {
       max-width: 50%;
