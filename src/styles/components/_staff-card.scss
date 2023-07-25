@@ -73,16 +73,12 @@
   img {
     width: 100%;
     height: auto;
-    overflow: hidden;
-
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-    transition: filter var(--slow-transition);
   }
 
   @include m-b-tablet-up {
     &:hover img,
     &:focus img{
+      transform: scale(1.03);
       -webkit-filter: grayscale(0);
       filter: grayscale(0);
     }

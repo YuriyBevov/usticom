@@ -1,6 +1,7 @@
 mixin staff-preview-card(data)
   a(href="team.html").staff-preview-card
-    img(src=`./assets/img/${data.img}` alt= data.name width="260" height="350")
+    .lw-image-hovered-wrapper
+      img(src=`./assets/img/${data.img}` alt= data.name width="260" height="350")
 
     .staff-preview-card__content
       span.staff-preview-card__title!= data.name

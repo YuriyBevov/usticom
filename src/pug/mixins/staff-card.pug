@@ -1,6 +1,7 @@
 mixin staff-card(data)
   .staff-card(class= data.cls ? data.cls : null)
-    img(src="./assets/img/staff-img-colored.png" alt="Литвиненко Вероника" width="250" height="285")
+    .lw-image-hovered-wrapper
+      img(src="./assets/img/staff-img-colored.png" alt="Литвиненко Вероника" width="250" height="285")
 
     .staff-card__content
       span.staff-card__title Литвиненко Вероника

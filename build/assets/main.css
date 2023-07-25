@@ -1658,6 +1658,23 @@ a {
     color: var(--accent);
   }
 }
+.lw-image-hovered-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.lw-image-hovered-wrapper img {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  -webkit-transition: -webkit-filter var(--slow-transition), -webkit-transform var(--slow-transition);
+  transition: -webkit-filter var(--slow-transition), -webkit-transform var(--slow-transition);
+  -o-transition: filter var(--slow-transition), transform var(--slow-transition);
+  transition: filter var(--slow-transition), transform var(--slow-transition);
+  transition: filter var(--slow-transition), transform var(--slow-transition), -webkit-filter var(--slow-transition), -webkit-transform var(--slow-transition);
+}
 
 /*шаблон*/
 .main-header {
@@ -3103,18 +3120,12 @@ a {
 .staff-card img {
   width: 100%;
   height: auto;
-  overflow: hidden;
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
-  -webkit-transition: -webkit-filter var(--slow-transition);
-  transition: -webkit-filter var(--slow-transition);
-  -o-transition: filter var(--slow-transition);
-  transition: filter var(--slow-transition);
-  transition: filter var(--slow-transition), -webkit-filter var(--slow-transition);
 }
 @media (min-width: 768px) {
   .staff-card:hover img, .staff-card:focus img {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
   }
@@ -4975,6 +4986,9 @@ a {
   .staff-card-modal .modal__content:hover img, .staff-card-modal .modal__content:focus img {
     -webkit-filter: grayscale(0);
     filter: grayscale(0);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
   }
 }
 /*# sourceMappingURL=main.css.map */
