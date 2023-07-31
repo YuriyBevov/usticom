@@ -76,6 +76,36 @@
     color: var(--accent);
   }
 
+  &-page-title {
+    font-family: var(--alt-font-family);
+    font-size: 60px;
+    font-weight: 700;
+    max-width: 450px;
+    z-index: 1;
+    position: relative;
+
+    @include m-b-desktop-down {
+      font-size: 52px;
+    }
+
+    @include m-b-down(1280px) {
+      font-size: 58px;
+      color: var(--white);
+    }
+
+    @include m-b-laptop-down {
+      font-size: 48px;
+    }
+
+    @include m-b-tablet-down {
+      font-size: 42px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 32px;
+    }
+  }
+
   &-subtitle {
     display: inline-block;
     font-size: 24px;

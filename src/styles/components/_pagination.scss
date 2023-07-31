@@ -1,0 +1,138 @@
+.pagination {
+  @extend .flex-wrap;
+  align-items: center;
+  width: 100%;
+  max-width: 1220px;
+  padding: 40px 0;
+  margin-left: -10px;
+
+  @include m-b-tablet-down {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 0;
+  }
+
+  @include m-b-mobile-lg-down {
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    padding: 20px 0;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+
+    @include m-b-mobile-lg-down {
+      width: 100%;
+      order: 1;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+
+    @include m-b-mobile-lg-down {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &:first-child {
+      margin-right: auto;
+      padding-right: 30px;
+
+      &:not(:last-child) {
+        @include m-b-tablet-down {
+          margin-bottom: 10px;
+        }
+      }
+
+      @include m-b-mobile-lg-down {
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+
+    &--checker {
+      width: 100%;
+    }
+  }
+
+
+  &__item {
+    @extend .flex-centered-content;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+
+    width: fit-content;
+    min-width: 40px;
+    height: 40px;
+    margin: 0 3px;
+    padding: 5px 7px;
+    color: var(--accent);
+
+    @include m-b-mobile-lg-down {
+      min-width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__item--num {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+    border: 1px solid var(--gray-3)
+  }
+
+  &__item--count {
+    color: var(--gray-2);
+  }
+
+  &__item--next svg {
+    transform: rotate(180deg);
+    fill: var(--primary);
+  }
+
+  &__item--active {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    color: var(--white);
+  }
+
+  &__item--disabled {
+    color: var(--gray-2);
+
+    svg {
+      fill: var(--gray-2);
+    }
+  }
+
+  &__item--side {
+    @include m-b-mobile-lg-down {
+      min-width: 100px;
+      order: 2;
+      border: 1px solid var(--accent);
+    }
+  }
+
+  &__item--checker {
+    font-size: 14px;
+    text-decoration: underline;
+
+    @include m-b-mobile-lg-down {
+      margin-top: 10px;
+    }
+  }
+
+  &__item--side.pagination__item--disabled {
+    border-color: var(--gray-2);
+  }
+
+  &__item:not(.pagination__item--active):not(.pagination__item--disabled):not(.pagination__item--count) {
+    @extend .hover-opacity;
+  }
+}
