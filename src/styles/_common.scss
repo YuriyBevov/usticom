@@ -180,7 +180,7 @@
       fill: var(--accent);
     }
 
-    span {
+    a {
       font-family: var(--alt-font-family);
       font-size: 14px;
       font-weight: 600;
@@ -191,7 +191,7 @@
     @include m-b-tablet-up {
       &:hover,
       &:focus {
-        span {
+        a {
           color: var(--accent);
         }
       }

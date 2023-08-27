@@ -22,7 +22,7 @@
 
     img {
       object-fit: contain;
-      filter: sepia();
+      filter: grayscale(1);
       transition: filter var(--slow-transition);
 
       &:hover,

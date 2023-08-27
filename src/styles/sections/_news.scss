@@ -1,13 +1,10 @@
 .news {
 
   &-title {
-    font-size: 32px;
+    margin-top: 0;
+    font-size: 30px;
 
     @include m-b-laptop-down {
-      font-size: 24px;
-    }
-
-    @include m-b-tablet-down {
       font-size: 20px;
     }
 
@@ -15,7 +12,6 @@
       font-size: 18px;
     }
   }
-
 
   &-header {
     display: grid;
@@ -25,6 +21,10 @@
 
     @include m-b-laptop-down {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m-b-down(960px) {
+      padding-top: 40px;
     }
 
     @include m-b-tablet-down {
@@ -37,12 +37,16 @@
     display: flex;
     flex-direction: column;
 
+    p {
+      margin-top: 0;
+    }
+
     p span {
       font-size: 18px;
       font-weight: 600;
       color: var(--accent);
 
-      @include m-b-mobile-lg-down {
+      @include m-b-down(960px) {
         font-size: 16px;
       }
     }
@@ -53,7 +57,7 @@
       &:not(:last-child) {
         margin-bottom: 5px;
       }
-      @include m-b-mobile-lg-down {
+      @include m-b-down(960px) {
         font-size: 12px;
       }
     }

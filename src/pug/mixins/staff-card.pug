@@ -10,6 +10,9 @@ mixin staff-card(data)
       if data.type == 'full'
         span.staff-card__list-title Специализация
         ul.staff-card__list
+
+      template#staff-card-full-description
+        ul.staff-card__list
           li.staff-card__list-item комплексное сопровождение судебных споров, включая споры в сфере банкротства физических и юридических лиц;
           li.staff-card__list-item составление договоров;
           li.staff-card__list-item анализ правовых рисков в юридических документах, подготовленных в рамках российского и международного права

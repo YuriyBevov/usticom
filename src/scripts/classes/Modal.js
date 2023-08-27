@@ -135,40 +135,66 @@ export class Modal {
   }
 
   openModal = (evt) => {
-    let title = this.modal.querySelector('.lw-section-title');
-    let desc = this.modal.querySelector('.modal__header-text');
-    let formName = this.modal.querySelector('input[type="hidden"]');
+    let delay = 0;
+    if(evt.currentTarget.dataset.modalAnchor === 'staff-card') {
+      delay = 100;
+      /*Обнуляю все записи*/
+      const staffPhoto = this.modal.querySelector('.staff-card img');
+      staffPhoto.setAttribute('src', '');
+      staffPhoto.setAttribute('alt', '');
 
-    if(title) {
-      if(evt.currentTarget.dataset.modalTitle) {
-        title.innerHTML = evt.currentTarget.dataset.modalTitle;
-        formName.value = title.innerText;
-      } else {
-        title.innerHTML = 'Связаться с менеджером';
-      }
-    }
+      const staffName = this.modal.querySelector('.staff-card__title');
+      staffName.innerHtml = '';
 
-    if(desc) {
-      if(evt.currentTarget.dataset.modalText) {
-        desc.innerHTML = evt.currentTarget.dataset.modalText;
-      } else {
-        desc.innerHTML = 'Заполните форму, и мы перезвоним Вам'
-      }
+      const staffDesc = this.modal.querySelector('.staff-card__desc');
+      staffDesc.innerHtml = '';
+
+      const staffList = this.modal.querySelector('.staff-card__list');
+      staffList.querySelectorAll('li').forEach(el=>el.remove());
+      /*Обнуляю все записи*/
+
+      /*Подставляю простые свойства в модалку*/
+      const parentNode = evt.currentTarget.parentNode;
+
+      const img = parentNode.parentNode.querySelector('.staff-card img');
+      const name = parentNode.querySelector('.staff-card__title');
+      const desc = parentNode.querySelector('.staff-card__desc');
+
+      staffPhoto.setAttribute('src', img.getAttribute('src'));
+      staffPhoto.setAttribute('alt', img.getAttribute('alt'));
+      staffName.innerHTML = name.innerHTML;
+      staffDesc.innerHTML = desc.innerHTML;
+      /*Подставляю простые свойства в модалку*/
+
+      /*Забераю все li из html-fragment и создаю новый для вставки в модалку*/
+      const fragment = document.createDocumentFragment();
+      const template = parentNode.querySelector('#staff-card-full-description');
+      const content = template.content.cloneNode(true);
+      content.querySelectorAll('li').forEach(item => {
+        fragment.appendChild(item);
+      });
+      /*Забераю все li из html-fragment*/
+
+      /*Пушу все элементы в список характеристик сотрудника в модалке*/
+      staffList.appendChild(fragment);
+      /*Пушу все элементы в список характеристик сотрудника в модалке*/
     }
 
     evt.preventDefault();
 
-    this.bodyLocker(true);
-    gsap.fromTo(this.modal, {display: 'none', opacity: 0}, {
-      display: 'flex',
-      opacity: 1,
-      duration: .6,
-      ease: 'ease-in',
-      onComplete: () => {
-        this.addListeners();
-        this.focusTrap();
-      }
-    });
+    setTimeout(() => {
+      this.bodyLocker(true);
+      gsap.fromTo(this.modal, {display: 'none', opacity: 0}, {
+        display: 'flex',
+        opacity: 1,
+        duration: .6,
+        ease: 'ease-in',
+        onComplete: () => {
+          this.addListeners();
+          this.focusTrap();
+        }
+      });
+    }, delay);
   }
 
   show = () => {

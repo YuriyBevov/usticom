@@ -1,6 +1,6 @@
-import IMask from 'imask';
+/*import IMask from 'imask';
 
-const phoneFields = document.querySelectorAll('input[type="tel"');
+const phoneFields = document.querySelectorAll('input[type="tel"]');
 
 if(phoneFields) {
   phoneFields.forEach(field => {
@@ -8,4 +8,4 @@ if(phoneFields) {
       mask: '+{7}(000)000-00-00'
     });
   });
-}
+}*/

@@ -1,0 +1,5 @@
+mixin news-page-top(data)
+  .lw-section.news-page-top
+    .lw-container-fluid.news-page-top__container
+      h1.news-page-top__title!= data.title
+      img(src=`./assets/img/${data.img}` alt= data.title width="1180" height="470")

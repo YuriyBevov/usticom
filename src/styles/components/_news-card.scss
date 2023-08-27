@@ -1,7 +1,7 @@
 .news-card {
   &__container {
     display: grid;
-    grid-template-columns: 220px auto;
+    grid-template-columns: 300px auto;
     grid-gap: 24px;
 
     @extend .hover-opacity;
@@ -26,6 +26,7 @@
       height: auto;
       transform: scale(1.01);
       transition: transform var(--slow-transition);
+      object-fit: contain;
 
       @include m-b-mobile-lg-down {
         width: 100%;

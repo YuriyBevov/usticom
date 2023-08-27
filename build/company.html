@@ -36,7 +36,7 @@
                   </svg></a></li>
             </ul>
           </div>
-          <button class="lw-main-btn" type="button">Оставить заявку</button>
+          <button class="lw-main-btn" type="button" data-modal-anchor="request-modal">Оставить заявку</button>
         </div>
       </div>
       <div class="main-header__section main-header__section--bottom">
@@ -438,7 +438,19 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer><div class="modal request-modal" id="request-modal">
+<div class="modal__overlay">
+<div class="modal__content">
+<button class="modal-closer">
+<svg width="24" height="24">
+<use xlink:href="./assets/sprite.svg#icon-close"></use>
+</svg>
+</button>
+<div class="modal__content-body">
+    <p>FORM</p></div>
+</div>
+</div>
+</div>
     <!--include ./modals/...-->
     <!--script(src="./js/bundle.js")-->
   </body>

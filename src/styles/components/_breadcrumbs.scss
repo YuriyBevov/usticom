@@ -1,6 +1,11 @@
 .breadcrumbs {
   margin: 40px 0;
 
+  &__container {
+    @extend .flex-wrap;
+    align-items: center;
+  }
+
   @include m-b-down(960px) {
     display: none;
   }
@@ -8,11 +13,11 @@
   a,
   span {
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 
-  a {
+  a > span {
     position: relative;
     padding-right: 48px;
     color: var(--gray-2);
@@ -32,7 +37,6 @@
   }
 
   span {
-    font-weight: 600;
     color: var(--accent);
   }
 }

@@ -42,7 +42,7 @@
     max-width: 450px;
 
     height: fit-content;
-    min-height: 300px;
+    //min-height: 300px;
     max-height: 85vh;
     padding: 25px;
     overflow: hidden;
@@ -68,5 +68,14 @@
       text-transform: uppercase;
       color: var(--white);
     }
+  }
+
+  &-form-answer {
+    display: block;
+    padding: 35px 0;
+  }
+
+  &--success .modal-form-answer {
+    padding: 0;
   }
 }

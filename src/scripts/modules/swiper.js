@@ -1,4 +1,4 @@
-import Swiper, {Pagination, Autoplay } from 'swiper';
+import Swiper, {Pagination, Autoplay, FreeMode } from 'swiper';
 
 const clientsSlider = document.querySelector('.clients-slider');
 
@@ -9,10 +9,13 @@ if(clientsSlider) {
     slidesPerView: 'auto',
     spaceBetween: 20,
     speed: 2500,
+    /*loop: true,
+    initialSlide: 2,*/
 
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
     },
 
     autoplay: !!clientsSlider.dataset.autoplay ? {
@@ -28,15 +31,16 @@ if(licensesSlider) {
   new Swiper(licensesSlider, {
     modules: [Pagination],
 
-    slidesPerView: 'auto',
+    slidesPerView: "auto",
     spaceBetween: 20,
 
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      dynamicBullets: true,
     },
 
-    breakpoints: {
+   /*breakpoints: {
       535: {
         slidesPerView: 2,
       },
@@ -53,7 +57,7 @@ if(licensesSlider) {
       1280: {
         slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 2 : 4
       }
-    }
+    }*/
   });
 }
 

@@ -5,10 +5,6 @@ if(tabs) {
 
   const onClickHandler = (evt) => {
     const target = evt.currentTarget;
-
-    //if(target.parentNode.classList.contains('active')) return;
-
-    //document.querySelector('.team-tabs__item.active').classList.remove('active');
     target.parentNode.classList.toggle('active');
   };
 
