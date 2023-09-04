@@ -6,6 +6,10 @@
     display: flex;
   }
 
+  .lw-image-hovered-wrapper {
+    width: 100%;
+  }
+
   img {
     display: block;
     height: 100%;
@@ -14,16 +18,7 @@
     @extend .hover-image-grayscale-with-zoom;
 
     @include m-b-down(500px) {
-      max-width: 50%;
       object-fit: contain;
-    }
-
-    @include m-b-down(420px) {
-      max-width: 40%;
-    }
-
-    @include m-b-down(375px) {
-      max-width: 100%;
     }
   }
 

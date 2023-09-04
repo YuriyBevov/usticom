@@ -12,6 +12,11 @@
     }
   }
 
+  a {
+    color: var(--accent);
+    @extend .hover-opacity;
+  }
+
   .title {
     @extend .lw-accent-title;
     font-family: var(--alt-font-family);

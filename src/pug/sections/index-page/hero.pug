@@ -1,6 +1,18 @@
 section.lw-section.hero
-  .lw-container.hero__container
-    span.hero__intro Предисловие
-    h1.hero__title Здесь будет заголовок
-    p.hero__text Подзаголовок, описание и любая необходимая информация
-    button(type="button").lw-main-btn Заказать звонок
+  .swiper.hero-section-swiper
+    .swiper-wrapper
+      .swiper-slide(style="background-image: url('./assets/img/hero-bg-desktop.jpg')")
+        .lw-container.hero__container
+          .swiper-slide-content
+            span.hero__intro Предисловие
+            h1.hero__title Здесь будет заголовок
+            p.hero__text Подзаголовок, описание и любая необходимая информация
+            button(type="button").lw-main-btn Заказать звонок
+
+      .swiper-slide(style="background-image: url('./assets/img/callback-bg.jpg')")
+        .lw-container.hero__container
+          .swiper-slide-content
+            span.hero__intro Предисловие 2
+            h1.hero__title Здесь будет заголовок 2
+            p.hero__text Подзаголовок, описание и любая необходимая информация 2
+            button(type="button").lw-main-btn Заказать звонок

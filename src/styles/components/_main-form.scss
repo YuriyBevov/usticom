@@ -6,6 +6,14 @@
 
   &:not(.main-form--modal) {
     padding: 40px 60px 25px 90px;
+
+    @include m-b-laptop-down {
+      padding: 40px;
+    }
+
+    @include m-b-mobile-lg-down {
+      padding: 30px 20px;
+    }
   }
 
   @include m-b-laptop-down {
@@ -13,7 +21,7 @@
   }
 
   @include m-b-mobile-lg-down {
-    padding: 30px 20px;
+    padding: 30px 0;
   }
 
   &__title {

@@ -4,6 +4,10 @@
   min-height: 768px;
   max-height: 900px;
   background-color: var(--light);
+  //background-image: url("../assets/img/hero-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   @include m-b-desktop-down {
     min-height: 634px;
@@ -20,15 +24,25 @@
     max-height: 520px;
   }
 
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(90deg, rgba(31, 31, 31, 0.60) 0%, rgba(255, 255, 255, 0.20) 100%);
+
+    z-index: 1;
+  }
+
   &__container {
     position: relative;
     @extend .flex-column;
     justify-content: center;
-    width: 100%;
-    max-width: 1400px;
     height: 100%;
     z-index: 2;
-    padding: 0 80px;
+    padding: 80px;
 
     @include m-b-desktop-down {
       padding: 35px;
@@ -115,33 +129,7 @@
 }
 
 .hero-section-swiper {
+  outline: 1px solid red;
   width: 100%;
   height: 100%;
-
-  .swiper-slide {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      background: linear-gradient(90deg, rgba(31, 31, 31, 0.60) 0%, rgba(255, 255, 255, 0.20) 100%);
-      z-index: 1;
-    }
-  }
-
-  .swiper-slide-content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    margin: auto;
-
-  }
 }

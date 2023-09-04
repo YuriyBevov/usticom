@@ -73,7 +73,7 @@
 
   &-accent-title {
     display: inline-block;
-    color: var(--accent);
+    color: var(--accent) !important;
   }
 
   &-page-title {
@@ -166,7 +166,7 @@
   }
 
   &-accent-color {
-    color: var(--accent);
+    color: var(--accent) !important;
   }
 
   &-iconed-link {
@@ -195,6 +195,12 @@
           color: var(--accent);
         }
       }
+    }
+  }
+
+  &-section-top-offset {
+    @include m-b-down(960px) {
+      margin-top: 30px;
     }
   }
 
