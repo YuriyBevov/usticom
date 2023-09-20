@@ -215,4 +215,30 @@
       transition: filter var(--slow-transition), transform var(--slow-transition);
     }
   }
+
+  &-table-wrapper {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+
+    & > table {
+      width: 100%;
+      max-width: 960px;
+      min-width: 720px;
+      margin-bottom: 20px;
+      border-collapse: collapse;
+
+      td {
+        padding: 5px 10px;
+      }
+
+      tr {
+        padding: 5px;
+      }
+
+      tr:nth-child(odd) {
+        background-color: var(--light);
+      }
+    }
+  }
 }

@@ -41,10 +41,10 @@ if(clientsSlider) {
   });
 }
 
-const licensesSlider = document.querySelector('.licenses-slider');
+const baseSlider = document.querySelector('.base-slider');
 
-if(licensesSlider) {
-  new Swiper(licensesSlider, {
+if(baseSlider) {
+  new Swiper(baseSlider, {
     modules: [Pagination],
 
     slidesPerView: "auto",
@@ -54,26 +54,7 @@ if(licensesSlider) {
       el: ".swiper-pagination",
       clickable: true,
       dynamicBullets: true,
-    },
-
-   /*breakpoints: {
-      535: {
-        slidesPerView: 2,
-      },
-
-      769: {
-        slidesPerView: 3,
-        grid: false
-      },
-
-      1025: {
-        slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 3 : 4
-      },
-
-      1280: {
-        slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 2 : 4
-      }
-    }*/
+    }
   });
 }
 

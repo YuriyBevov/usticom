@@ -1,0 +1,22 @@
+.base-slider {
+  .swiper-wrapper {
+    width: fit-content;
+    height: 280px;
+
+    @include m-b-mobile-lg-down {
+      height: 175px;
+    }
+  }
+
+  .swiper-slide {
+    height: inherit;
+    max-height: inherit;
+    width: fit-content !important;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

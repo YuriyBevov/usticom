@@ -512,7 +512,7 @@ if (nav) {
   };
 
   var checkWidth = function checkWidth() {
-    if (window.innerWidth < 1281) {
+    if (window.innerWidth < 1361) {
       setMobileNav();
     } else {
       setDesktopNav();
@@ -617,10 +617,10 @@ if (clientsSlider) {
   });
 }
 
-var licensesSlider = document.querySelector('.licenses-slider');
+var baseSlider = document.querySelector('.base-slider');
 
-if (licensesSlider) {
-  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](licensesSlider, {
+if (baseSlider) {
+  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](baseSlider, {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],
     slidesPerView: "auto",
     spaceBetween: 20,
@@ -629,22 +629,6 @@ if (licensesSlider) {
       clickable: true,
       dynamicBullets: true
     }
-    /*breakpoints: {
-       535: {
-         slidesPerView: 2,
-       },
-        769: {
-         slidesPerView: 3,
-         grid: false
-       },
-        1025: {
-         slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 3 : 4
-       },
-        1280: {
-         slidesPerView: licensesSlider.classList.contains('licenses-slider--thin') ? 2 : 4
-       }
-     }*/
-
   });
 }
 
@@ -733,6 +717,36 @@ if (tabs) {
 
   openers.forEach(function (btn) {
     btn.addEventListener('click', onClickHandler);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/wrappers.js":
+/*!*****************************************!*\
+  !*** ./src/scripts/modules/wrappers.js ***!
+  \*****************************************/
+/***/ (() => {
+
+var videos = document.querySelectorAll('iframe');
+
+if (videos) {
+  videos.forEach(function (video) {
+    wrapper = document.createElement('div');
+    wrapper.setAttribute('class', 'video-wrapper');
+    video.parentNode.insertBefore(wrapper, video);
+    wrapper.appendChild(video);
+  });
+}
+
+var tables = document.querySelectorAll('table');
+
+if (tables) {
+  tables.forEach(function (table) {
+    wrapper = document.createElement('div');
+    wrapper.setAttribute('class', 'lw-table-wrapper');
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
   });
 }
 
@@ -23438,10 +23452,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_team_preview_grid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_team_preview_grid__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _modules_team_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/team-tabs */ "./src/scripts/modules/team-tabs.js");
 /* harmony import */ var _modules_team_tabs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_modules_team_tabs__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/modal */ "./src/scripts/modules/modal.js");
-/* harmony import */ var _modules_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/common */ "./src/scripts/modules/common.js");
-/* harmony import */ var _modules_common__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_common__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _modules_fancybox__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/fancybox */ "./src/scripts/modules/fancybox.js");
+/* harmony import */ var _modules_wrappers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/wrappers */ "./src/scripts/modules/wrappers.js");
+/* harmony import */ var _modules_wrappers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_modules_wrappers__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modal */ "./src/scripts/modules/modal.js");
+/* harmony import */ var _modules_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/common */ "./src/scripts/modules/common.js");
+/* harmony import */ var _modules_common__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_common__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _modules_fancybox__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/fancybox */ "./src/scripts/modules/fancybox.js");
+
 
 
 

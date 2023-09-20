@@ -35,6 +35,7 @@
       /*max-height: 225px;*/
       //flex-grow: 1;
       object-fit: cover;
+      aspect-ratio: 18/10;
       transform: scale(1.01);
       transition: transform var(--slow-transition);
     }

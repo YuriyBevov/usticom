@@ -24,7 +24,7 @@ if(nav) {
   }
 
   const checkWidth = () => {
-    if(window.innerWidth < 1281) {
+    if(window.innerWidth < 1361) {
       setMobileNav();
     } else {
       setDesktopNav();

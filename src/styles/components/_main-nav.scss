@@ -22,7 +22,7 @@
       fill: var(--accent);
     }
 
-    @include m-b-down(1280px) {
+    @include m-b-down(1360px) {
       display: flex;
     }
   }
@@ -59,7 +59,7 @@
   }
 
   &__list {
-    @include m-b-down(1280px) {
+    @include m-b-down(1360px) {
       display: none;
     }
   }
@@ -68,7 +68,7 @@
     order: 1;
     &--mobile-only {
       order: 2;
-      @include m-b-up(1280px) {
+      @include m-b-up(1360px) {
         display: none;
       }
 
@@ -135,8 +135,10 @@
         align-items: center;
 
         svg {
+          min-width: 24px;
           fill: var(--gray-2);
           margin: 0 5px;
+          margin-left: 15px;
           transition: fill var(--main-transition), transform var(--main-transition);
         }
 
@@ -166,11 +168,17 @@
     &__inner-list {
       @extend .list-reset;
       @extend .flex-wrap;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      overflow-x: auto;
+      margin: 0 20px;
       @extend .lw-container;
-      align-items: center;
+      //align-items: center;
       justify-content: space-between;
 
       a {
+        margin: 0;
+        height: 100%;
         color: var(--white);
       }
 
@@ -188,7 +196,8 @@
     }
 
     &__inner-list-item {
-      flex-grow: 1;
+      //flex-grow: 1;
+      width: min-content;
 
       &:hover,
       &:focus {
@@ -215,15 +224,15 @@
       }
 
       .main-nav__inner-list-wrapper .main-nav__inner-list {
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 35px;
+        display: block;
+        column-count: 3;
+        padding: 35px 0 20px;
         justify-content: flex-start;
 
         li {
           flex-grow: initial;
-          width: calc(100% / 3);
-          margin-bottom: 35px;
+          width: fit-content;
+          margin-bottom: 15px;
 
           a {
             justify-content: flex-start;
@@ -232,6 +241,10 @@
             font-weight: 500;
             padding: 0 10px;
             color: #8C8C8C;
+
+            display: flex;
+            -webkit-box-orient: initial;
+            overflow: initial;
 
             @extend .hover-accent-color;
           }
@@ -365,7 +378,7 @@
 
     .main-nav__inner-list-item {
       &--mobile-only {
-        @include m-b-up(1280px) {
+        @include m-b-up(1360px) {
           display: none;
         }
 
