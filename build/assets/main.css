@@ -3326,10 +3326,14 @@ a {
     font-size: 52px;
   }
 }
+@media (max-width: 1720px) {
+  .lw-page-title {
+    color: var(--white);
+  }
+}
 @media (max-width: 1280px) {
   .lw-page-title {
     font-size: 58px;
-    color: var(--white);
   }
 }
 @media (max-width: 1023px) {
@@ -3799,7 +3803,7 @@ a {
   -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
-  padding: 35px 0 20px;
+  padding: 20px 0;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -3811,7 +3815,7 @@ a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .main-nav:not(.main-nav--mobile) .main-nav__inner-list-item.has-inner .main-nav__inner-list-wrapper .main-nav__inner-list li a {
   -webkit-box-pack: start;
@@ -4784,9 +4788,18 @@ a {
   align-items: center;
   height: 100%;
   padding-right: 0;
-  /*h1 {
-    @extend .lw-page-title;
-  }*/
+  /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
+}
+@media (max-width: 1720px) {
+  .inner-page-top__container::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 }
 @media (max-width: 1719px) {
   .inner-page-top__container {
@@ -4800,15 +4813,6 @@ a {
     grid-template-columns: 1fr;
     grid-gap: 0;
     padding-right: 30px;
-  }
-  .inner-page-top__container::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 533px) {
@@ -5734,13 +5738,13 @@ a {
 .base-slider .swiper-slide {
   height: inherit;
   max-height: inherit;
-  width: -webkit-fit-content !important;
-  width: -moz-fit-content !important;
-  width: fit-content !important;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .base-slider .swiper-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: contain;
   object-fit: contain;
 }

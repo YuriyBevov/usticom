@@ -6,10 +6,11 @@ if(heroSlider) {
   new Swiper(heroSlider, {
     modules: [EffectFade, Autoplay],
 
-    effect: 'fade',
-    speed: 2000,
+    //effect: 'fade',
+    speed: 3000,
     slidesPerView: 1,
-    loop: true,
+    spaceBetween: 30,
+    //loop: true,
 
     autoplay: {
       delay: 5000,

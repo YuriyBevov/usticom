@@ -586,10 +586,11 @@ var heroSlider = document.querySelector('.hero-section-swiper');
 if (heroSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](heroSlider, {
     modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay],
-    effect: 'fade',
-    speed: 2000,
+    //effect: 'fade',
+    speed: 3000,
     slidesPerView: 1,
-    loop: true,
+    spaceBetween: 30,
+    //loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false

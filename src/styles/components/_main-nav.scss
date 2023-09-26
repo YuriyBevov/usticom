@@ -226,13 +226,13 @@
       .main-nav__inner-list-wrapper .main-nav__inner-list {
         display: block;
         column-count: 3;
-        padding: 35px 0 20px;
+        padding: 20px 0;
         justify-content: flex-start;
 
         li {
           flex-grow: initial;
           width: fit-content;
-          margin-bottom: 15px;
+          margin-bottom: 5px;
 
           a {
             justify-content: flex-start;

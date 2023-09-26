@@ -88,9 +88,12 @@
       font-size: 52px;
     }
 
+    @include m-b-down(1720px) {
+      color: var(--white);
+    }
+
     @include m-b-down(1280px) {
       font-size: 58px;
-      color: var(--white);
     }
 
     @include m-b-laptop-down {

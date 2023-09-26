@@ -11,11 +11,11 @@
   .swiper-slide {
     height: inherit;
     max-height: inherit;
-    width: fit-content !important;
+    width: fit-content;
 
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: contain;
     }
   }
