@@ -36,7 +36,7 @@ Fancybox.defaults.l10n = {
 };
 
 const galleries = document.querySelectorAll('[data-fancybox-gallery]');
-console.log('TEST', galleries);
+
 if(galleries) {
   galleries.forEach(gallery => {
     const collection = gallery.dataset.fancyboxGallery;

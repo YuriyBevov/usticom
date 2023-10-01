@@ -1,3 +1,11 @@
+.webp .subscription {
+  background-image: url("../assets/img/subscription-bg.webp");
+}
+
+.no-webp .subscription {
+  background-image: url("../assets/img/subscription-bg.jpg");
+}
+
 .subscription {
   padding: 45px 0;
   background-image: url("../assets/img/subscription-bg.png");

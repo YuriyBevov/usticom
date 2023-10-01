@@ -1,7 +1,16 @@
 .callback {
-  background-image: url("../assets/img/callback-bg.jpg");
+  //background-image: url("../assets/img/callback-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 54px 0;
 }
+
+.webp .callback {
+  background-image: url("../assets/img/callback-bg.webp");
+}
+
+.no-webp .callback {
+  background-image: url("../assets/img/callback-bg.jpg");
+}
+

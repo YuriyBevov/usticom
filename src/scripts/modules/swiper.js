@@ -1,20 +1,26 @@
-import Swiper, {Pagination, Autoplay, FreeMode, EffectFade } from 'swiper';
+import Swiper, {Pagination, Autoplay, EffectFade } from 'swiper';
 
 const heroSlider = document.querySelector('.hero-section-swiper');
 
 if(heroSlider) {
   new Swiper(heroSlider, {
-    modules: [EffectFade, Autoplay],
+    modules: [Pagination, EffectFade, Autoplay],
 
-    //effect: 'fade',
-    speed: 3000,
+    effect: 'fade',
+    speed: 600,
     slidesPerView: 1,
     spaceBetween: 30,
-    //loop: true,
+    loop: true,
 
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".hero-section-swiper .swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
     },
   })
 }
@@ -30,7 +36,7 @@ if(clientsSlider) {
     speed: 2500,
 
     pagination: {
-      el: ".swiper-pagination",
+      el: ".clients-slider .swiper-pagination",
       clickable: true,
       dynamicBullets: true,
     },
@@ -52,7 +58,7 @@ if(baseSlider) {
     spaceBetween: 20,
 
     pagination: {
-      el: ".swiper-pagination",
+      el: ".base-slider .swiper-pagination",
       clickable: true,
       dynamicBullets: true,
     }
