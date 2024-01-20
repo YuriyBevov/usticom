@@ -1,0 +1,38 @@
+footer.main-footer
+  .lw-container-thin
+    .main-footer__section.main-footer__section--top
+      .main-footer__logo
+        include ../components/main-logo
+
+      include ../components/footer-contacts
+      include ../components/social
+
+    .main-footer__section.main-footer__section--middle
+      nav.main-footer__nav
+        ul
+          li
+            a(href="#") Услуги
+          li
+            a(href="#") Публикации
+          li
+            a(href="#") О компании
+          li
+            a(href="#") Новости
+          li
+            a(href="#") Наши успехи
+          li
+            a(href="#") Отрасли
+          li
+            a(href="#") Мероприятия
+          li
+            a(href="#") Контакты
+
+      a(href="#").lw-accent-color.main-footer__partnership Партнерская программа
+
+      include ../components/subscribe-block
+
+    .main-footer__section.main-footer__section--bottom
+      include ../components/footer-contacts
+      include ../components/social
+
+include ../modals/request-modal

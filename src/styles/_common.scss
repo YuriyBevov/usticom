@@ -175,7 +175,7 @@
   &-iconed-link {
     @extend .flex-wrap;
     align-items: center;
-    margin-right: 50px;
+    margin-right: 20px;
     min-height: 40px;
 
     svg {
@@ -183,7 +183,8 @@
       fill: var(--accent);
     }
 
-    a {
+    a,
+    span {
       font-family: var(--alt-font-family);
       font-size: 14px;
       font-weight: 600;
@@ -215,7 +216,8 @@
       transform: scale(1.01);
       -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
       filter: grayscale(100%);
-      transition: filter var(--slow-transition), transform var(--slow-transition);
+      transition: filter var(--slow-transition),
+        transform var(--slow-transition);
     }
   }
 

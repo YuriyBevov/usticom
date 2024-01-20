@@ -5,6 +5,10 @@
     display: flex;
   }
 
+  &__closer {
+    margin-left: auto;
+  }
+
   &__opener,
   &__closer {
     @extend .btn-reset;
@@ -13,8 +17,6 @@
     cursor: pointer;
     width: 40px;
     height: 40px;
-
-    margin-left: auto;
   }
 
   &__opener {
@@ -22,8 +24,12 @@
       fill: var(--accent);
     }
 
-    @include m-b-down(1360px) {
+    @include m-b-down(1060px) {
       display: flex;
+    }
+
+    @include m-b-down(480px) {
+      margin-left: auto;
     }
   }
 
@@ -55,11 +61,11 @@
 
   &__footer {
     display: none;
-    flex-direction:column;
+    flex-direction: column;
   }
 
   &__list {
-    @include m-b-down(1360px) {
+    @include m-b-down(1060px) {
       display: none;
     }
   }
@@ -68,7 +74,7 @@
     order: 1;
     &--mobile-only {
       order: 2;
-      @include m-b-up(1360px) {
+      @include m-b-up(1060px) {
         display: none;
       }
 
@@ -86,11 +92,16 @@
       @extend .list-reset;
       @extend .flex-wrap;
       align-items: center;
+
+      @include m-b-up(1281px) {
+        min-width: 784px;
+      }
     }
 
     &__list-item {
       height: 100%;
       transition: background-color var(--main-transition);
+      flex-grow: 1;
 
       &:hover,
       &:focus {
@@ -98,7 +109,7 @@
 
         & > a {
           @include m-b-tablet-up {
-            opacity: .7;
+            opacity: 0.7;
           }
           color: var(--white);
 
@@ -111,23 +122,27 @@
 
       a {
         @extend .flex-centered-content;
-        justify-content: flex-start;
+        justify-content: center;
         font-family: var(--alt-font-family);
         font-size: 16px;
         font-weight: 500;
         line-height: 1.4;
         min-height: 24px;
-        padding: 20px 10px;
-        padding-top: 22px;
+        padding: 15px 10px;
+        padding-top: 17px;
         flex-grow: 1;
-        margin: 0 20px;
         color: var(--primary);
 
         transition: color var(--main-transition), opacity var(--main-transition);
       }
 
-      &--accent a {
-        color: var(--accent);
+      &--accent {
+        @include m-b-down(1180px) {
+          display: none;
+        }
+        a {
+          color: var(--accent);
+        }
       }
 
       &.has-inner {
@@ -138,8 +153,8 @@
           min-width: 24px;
           fill: var(--gray-2);
           margin: 0 5px;
-          margin-left: 15px;
-          transition: fill var(--main-transition), transform var(--main-transition);
+          transition: fill var(--main-transition),
+            transform var(--main-transition);
         }
 
         &:hover,
@@ -173,7 +188,6 @@
       overflow-x: auto;
       margin: 0 20px;
       @extend .lw-container;
-      //align-items: center;
       justify-content: space-between;
 
       a {
@@ -196,14 +210,13 @@
     }
 
     &__inner-list-item {
-      //flex-grow: 1;
       width: min-content;
 
       &:hover,
       &:focus {
         a {
           @include m-b-tablet-up {
-            opacity: .7;
+            opacity: 0.7;
           }
         }
 
@@ -220,7 +233,8 @@
       svg {
         fill: var(--gray-2);
         margin: 0 5px;
-        transition: fill var(--main-transition), transform var(--main-transition);
+        transition: fill var(--main-transition),
+          transform var(--main-transition);
       }
 
       .main-nav__inner-list-wrapper .main-nav__inner-list {
@@ -240,7 +254,7 @@
             font-size: 16px;
             font-weight: 500;
             padding: 0 10px;
-            color: #8C8C8C;
+            color: #8c8c8c;
 
             display: flex;
             -webkit-box-orient: initial;
@@ -286,13 +300,13 @@
     .main-scroll {
       &::-webkit-scrollbar {
         display: none;
-          background-color: white;
-          width: 12px;
+        background-color: white;
+        width: 12px;
       }
 
       &::-webkit-scrollbar-thumb {
         display: none;
-          background-color: white;
+        background-color: white;
       }
     }
 
@@ -375,10 +389,9 @@
       }
     }
 
-
     .main-nav__inner-list-item {
       &--mobile-only {
-        @include m-b-up(1360px) {
+        @include m-b-up(1060px) {
           display: none;
         }
 

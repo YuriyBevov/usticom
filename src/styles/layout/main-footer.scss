@@ -1,162 +1,122 @@
 .main-footer {
-  padding: 50px 0;
-  box-shadow: 0px -3px 25px 0px rgba(0, 0, 0, 0.14);
+  padding: 30px 0;
 
-  @include m-b-down(1180px) {
-    padding: 20px 0;
+  ul {
+    @extend .list-reset;
+
+    @include m-b-tablet-down {
+      li:not(.social__list-item) {
+        padding-right: 30px;
+      }
+    }
+
+    @include m-b-down(468px) {
+      li {
+        padding-right: 0;
+      }
+    }
   }
 
   &__section {
-    display: flex;
-    padding: 20px 0;
-
-
+    padding: 30px 0;
     &:not(:last-of-type) {
-      padding: 50px 0;
       border-bottom: 1px solid rgba(35,31,32, .1);
+    }
 
-      @include m-b-down(1180px) {
-        padding: 20px 0;
+    &--top {
+      display: grid;
+      grid-template-columns: 3fr 2fr 4fr;
+      grid-gap: 40px;
+
+      @include m-b-down(1240px) {
+        grid-template-columns: 3fr 3fr 4fr;
+      }
+
+      @include m-b-laptop-down {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       @include m-b-tablet-down {
-        border: none;
-      }
-    }
-
-    ul {
-      @extend .list-reset;
-    }
-  }
-
-  &__section--top {
-    .social {
-      display: none;
-
-      @include m-b-tablet-down {
-        display: block;
-        margin-left: auto;
-      }
-
-      @include m-b-mobile-lg-down {
-        display: none;
-      }
-    }
-
-    .footer-contacts {
-      @include m-b-tablet-down {
-        display: none;
-      }
-    }
-  }
-
-  &__section--middle {
-    display: grid;
-    grid-template-columns: minmax(auto, 340px) auto 560px;
-    grid-gap: 30px;
-
-    .subscribe {
-      margin-top: 5px;
-      margin-left: 40px;
-
-      @include m-b-down(1180px) {
-        grid-column: 1/3;
-        margin-left: 0;
-      }
-    }
-
-    @include m-b-down(1180px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include m-b-down(680px) {
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
-    }
-
-    .main-footer__nav {
-      @include m-b-down(680px) {
-        grid-column: 1/3;
-        max-width: 460px;
-      }
-    }
-  }
-
-  &__section--bottom {
-
-    @include m-b-mobile-lg-down {
-      flex-direction: column;
-    }
-
-    .footer-contacts {
-      display: none;
-
-      @include m-b-tablet-down {
-        display: grid;
-      }
-
-      @include m-b-mobile-lg-down {
         grid-template-columns: 1fr;
-        grid-gap: 15px;
-        margin-bottom: 30px;
       }
     }
+  }
 
-    .social {
-      @include m-b-tablet-down {
-        display: none;
-      }
+  &__section-field {
+    display: flex;
+    flex-direction: column;
 
-      @include m-b-mobile-lg-down {
-        display: block;
+    @include m-b-tablet-down {
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba(35,31,32, .1);
+        padding-bottom: 25px;
       }
     }
+  }
+
+  .main-logo {
+    justify-content: initial;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 30px;
   }
 
   &__nav {
-    ul {
-      @extend .flex-wrap;
 
-      li {
-        width: 50%;
-        min-width: 140px;
-        padding-right: 10px;
+    &--column {
+      ul {
+        @extend .flex-column;
 
-        a {
-          @extend .flex-wrap;
-          font-size: 18px;
-          font-weight: 500;
-          padding: 5px 0;
-          color: var(--primary);
-          @extend .hover-opacity;
+        @include m-b-tablet-down {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
 
-          @include m-b-down(680px) {
-            font-size: 14px;
+        li {
+          width: 100%;
+
+          @include m-b-tablet-down {
+            width: 50%;
+          }
+
+          @include m-b-down(468px) {
+            width: 100%;
           }
         }
       }
     }
-  }
 
-  &__partnership {
-    display: flex;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 5px 0;
-    @extend .hover-opacity;
+    ul {
+      column-count: 2;
+      width: 100%;
 
-    @include m-b-down(680px) {
-      font-size: 16px;
-    }
-  }
+      @include m-b-down(960px) {
+        column-count: 1;
+      }
 
-  &__logo {
-    align-self: center;
-    margin-right: 40px;
+      @include m-b-tablet-down {
+        column-count: 2;
+      }
 
-    @include m-b-tablet-down {
-      width: 140px;
-      align-self: initial;
+      @include m-b-down(410px) {
+        column-count: 1;
+      }
+
+      li {
+        a {
+          display: flex;
+          font-size: 18px;
+          font-weight: 500;
+          padding: 5px;
+          color: var(--dark);
+
+          @extend .hover-opacity;
+
+          @include m-b-mobile-lg-down {
+            font-size: 16px;
+          }
+        }
+      }
     }
   }
 }

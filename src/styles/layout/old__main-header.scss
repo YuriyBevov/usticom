@@ -1,0 +1,76 @@
+.main-header {
+  position: sticky;
+  top: -72px;
+  z-index: 10;
+  background-color: var(--white);
+  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.14);
+
+  .main-logo {
+    img {
+      width: auto;
+      max-height: 40px;
+    }
+  }
+
+  @include m-b-down(1360px) {
+    top: 0;
+  }
+
+  &__container {
+    @extend .flex-wrap;
+    align-items: center;
+  }
+
+  &__section {
+
+    ul {
+      @extend .list-reset;
+    }
+
+    &--top {
+      padding: 12px 0;
+      background: linear-gradient(90deg, #C8C8C8 0%, #EDEDED 100%);
+
+      .social {
+        margin-left: auto;
+
+        &__list {
+          gap: 8px;
+        }
+
+        svg,
+        img {
+          width: auto;
+          height: 24px;
+          fill: var(--text);
+        }
+      }
+
+      button {
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 30px;
+        width: 100%;
+        max-width: 210px;
+        min-height: 48px;
+        background-color: var(--accent);
+      }
+
+      @include m-b-down(1360px) {
+        display: none;
+      }
+    }
+
+    &--bottom {
+      position: relative;
+
+      .main-nav {
+        margin-left: auto;
+      }
+
+      @include m-b-down(1360px) {
+        padding: 15px 0;
+      }
+    }
+  }
+}

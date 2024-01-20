@@ -1,77 +1,52 @@
 .footer-contacts {
-  @extend .flex-wrap;
+  @extend .flex-column;
   flex-grow: 1;
-  margin-left: auto;
-
-  @include m-b-laptop-down {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    width: fit-content;
-    max-width: 480px;
-  }
 
   @include m-b-tablet-down {
-    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  @include m-b-mobile-lg-down {
+    display: flex;
   }
 
   &__field {
     position: relative;
     @extend .flex-column;
     max-width: 320px;
-    padding-left: 100px;
-    margin-left: auto;
+    padding-left: 80px;
 
-    @include m-b-down(1180px) {
-      padding-left: 68px;
-      max-width: 300px;
-    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
 
-    @include m-b-laptop-down {
-      margin-left: 0;
-
-      &:nth-child(1),
-      &:nth-child(3) {
-        order: 1;
-      }
-
-      &:nth-child(2) {
-        order: 2;
+      @include m-b-tablet-down {
+        margin-bottom: 0;
       }
     }
 
     @include m-b-tablet-down {
-      padding-left: 40px;
-      max-width: 100%;
-    }
-
-    @include m-b-laptop-down {
-
-      &:nth-child(2) {
-        order: 1;
+      &:last-child {
+        grid-column: 1/3;
       }
     }
 
+    @include m-b-laptop-down {
+      padding-left: 55px;
+    }
 
     img {
       position: absolute;
       top: 6px;
-      left: 20px;
+      left: 0;
       width: 68px;
       height: 68px;
       object-fit: contain;
 
-      @include m-b-down(1180px) {
-        width: 48px;
-        height: 48px;
-        left: 10px;
-        top: 8px;
-      }
-
-      @include m-b-tablet-down {
-        height: 32px;
-        width: 32px;
-        left: 0;
+      @include m-b-laptop-down {
+        width: 40px;
+        height: 40px;
       }
     }
 
@@ -83,13 +58,8 @@
       margin-top: 12px;
       margin-bottom: 8px;
 
-      @include m-b-down(1180px) {
+      @include m-b-laptop-down {
         font-size: 16px;
-      }
-
-      @include m-b-tablet-down {
-        font-size: 14px;
-        margin: 4px 0;
       }
     }
 
@@ -99,10 +69,6 @@
       color: var(--primary);
 
       @extend .hover-opacity;
-
-      @include m-b-down(1180px) {
-        font-size: 14px;
-      }
     }
 
     address {
@@ -110,10 +76,6 @@
       font-weight: 500;
       font-style: normal;
       color: var(--primary);
-
-      @include m-b-down(1180px) {
-        font-size: 14px;
-      }
     }
   }
 }

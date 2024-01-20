@@ -1,16 +1,18 @@
 header.main-header
-  .main-header__section.main-header__section--top
-    .lw-container.main-header__container
-      include ../components/company-phone
-      include ../components/company-mail
-      include ../components/social
-      button(type="button" data-modal-anchor="request-modal").lw-main-btn Оставить заявку
-  .main-header__section.main-header__section--bottom
-    .lw-container.main-header__container
+  .lw-container.main-header__container
+    .main-header__side
       include ../components/main-logo
-      include ../components/main-nav
-      button(type="button" aria-label="Открыть меню").main-nav__opener
-        svg(width="24" height="24")
-          use(xlink:href="./assets/sprite.svg#icon-burger")
 
-
+    .main-header__content
+      .main-header__section.main-header__section--top
+        .main-header__info
+          include ../components/company-address
+          include ../components/company-phone
+          include ../components/company-mail
+        include ../components/social
+      .main-header__section.main-header__section--bottom
+        include ../components/main-nav
+        button(type="button" data-modal-anchor="request-modal").main-header__request.lw-main-btn Оставить заявку
+        button(type="button" aria-label="Открыть меню").main-nav__opener
+          svg(width="24" height="24")
+            use(xlink:href="./assets/sprite.svg#icon-burger")
