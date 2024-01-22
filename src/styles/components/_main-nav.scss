@@ -72,6 +72,13 @@
 
   &__inner-list-item {
     order: 1;
+
+    &--laptop-hide {
+      @include m-b-down(1360px) {
+        display: none;
+      }
+    }
+
     &--mobile-only {
       order: 2;
       @include m-b-up(1060px) {
