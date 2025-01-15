@@ -48,20 +48,22 @@ if(clientsSlider) {
   });
 }
 
-const baseSlider = document.querySelector('.base-slider');
+const baseSliders = document.querySelectorAll('.base-slider');
 
-if(baseSlider) {
-  new Swiper(baseSlider, {
-    modules: [Pagination],
+if(baseSliders) {
+  baseSliders.forEach(slider => {
+    new Swiper(slider, {
+      modules: [Pagination],
 
-    slidesPerView: "auto",
-    spaceBetween: 20,
+      slidesPerView: "auto",
+      spaceBetween: 20,
 
-    pagination: {
-      el: ".base-slider .swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    }
+      pagination: {
+        el: ".base-slider .swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      }
+    });
   });
 }
 
